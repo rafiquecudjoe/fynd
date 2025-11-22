@@ -13,28 +13,28 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-[#F5F5F5]">
       {/* Top Part - Hero Section */}
-      <div className="max-w-[1440px] mx-auto px-6 py-6 space-y-6">
-        <div className="flex flex-col lg:flex-row items-stretch gap-6">
-          <div className="flex-1 bg-white rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6">
+        <div className="flex flex-col lg:flex-row items-stretch gap-4 sm:gap-6">
+          <div className="flex-1 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <div className="max-w-[640px]">
-              <div className="space-y-12">
-                <div className="space-y-4">
-                  <h1 className="text-4xl md:text-5xl lg:text-[48px] font-semibold leading-[140%] tracking-[-0.04em] text-black">
+              <div className="space-y-8 sm:space-y-12">
+                <div className="space-y-3 sm:space-y-4">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-semibold leading-[140%] tracking-[-0.04em] text-black">
                     Your Trusted Platform To Recover Lost Items and Verify
                     Information
                   </h1>
-                  <p className="text-lg md:text-xl text-gray-100 leading-[150%]">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-100 leading-[150%]">
                     From locating lost items to confirming the identity or
                     credibility of people and organizations, Fyndae gives you
                     the information you need to move confidently and securely.
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-8">
-                  <button className="px-6 py-3 rounded-lg border border-gray-40 bg-[#F7F7F8] text-dark-90 font-medium text-lg leading-[150%] hover:bg-gray-50 transition-colors">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 lg:gap-6">
+                  <button className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg border border-gray-40 bg-[#F7F7F8] text-dark-90 font-medium text-base sm:text-lg leading-[150%] hover:bg-gray-50 transition-colors">
                     Join The Community
                   </button>
-                  <button className="px-6 py-3 rounded-lg bg-green-70 text-white font-medium text-lg leading-[150%] hover:bg-green-70/90 transition-colors">
+                  <button className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-green-70 text-white font-medium text-base sm:text-lg leading-[150%] hover:bg-green-70/90 transition-colors">
                     Report An Item
                   </button>
                 </div>
@@ -79,11 +79,12 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex-1 min-h-[400px] lg:min-h-[744px] rounded-3xl overflow-hidden">
+          <div className="flex-1 min-h-[300px] sm:min-h-[400px] lg:min-h-[744px] rounded-2xl sm:rounded-3xl overflow-hidden">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/2c1210919e26060e9c4a8fb840eee8a67e654090?width=1306"
               alt="Security and trust illustration"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -95,7 +96,7 @@ export default function Index() {
       </div>
 
       {/* Down Part - Sections */}
-      <div className="max-w-[1440px] mx-auto px-6 py-8 md:py-12 space-y-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-6 sm:py-8 md:py-12 space-y-6 sm:space-y-8">
         <VerificationSystem />
         <FeaturedPosts />
         <Testimonials />
