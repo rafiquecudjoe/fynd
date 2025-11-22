@@ -46,12 +46,12 @@ COPY --from=builder /app/dist/spa /usr/share/nginx/html
 
 # Create startup script
 RUN echo '#!/bin/sh' > /start.sh && \
-    echo 'PORT=${PORT:-3001} node /app/dist/server/node-build.mjs &' >> /start.sh && \
+    echo 'PORT=5000 node /app/dist/server/node-build.mjs &' >> /start.sh && \
     echo 'nginx -g "daemon off;"' >> /start.sh && \
     chmod +x /start.sh
 
 # Expose ports
-EXPOSE 80
+EXPOSE 3001
 
 # Start both Node.js backend and Nginx
 CMD ["/start.sh"]
