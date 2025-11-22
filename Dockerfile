@@ -24,8 +24,8 @@ FROM nginx:alpine
 # Install Node.js for the backend
 RUN apk add --no-cache nodejs npm
 
-# Install pnpm globally
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# Install pnpm globally using npm
+RUN npm install -g pnpm
 
 WORKDIR /app
 
