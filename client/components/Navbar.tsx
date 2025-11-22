@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full max-w-[1392px] mx-auto my-6 px-6 md:px-20 py-6 rounded-3xl border-t border-b border-white-95 bg-white">
+    <nav className="w-full mx-auto my-6 px-4 sm:px-6 py-6 rounded-3xl border-b border-[#F1F1F3] bg-white">
       <div className="flex items-center justify-between">
         <Link to="/" className="flex-shrink-0">
           <img
@@ -20,7 +20,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <Link
             to="/"
-            className="px-5 py-3 text-grey-15 font-medium text-base leading-[150%] hover:opacity-80 transition-opacity"
+            className="text-grey-15 font-medium text-base leading-[150%] hover:opacity-80 transition-opacity"
           >
             Home
           </Link>

@@ -28,7 +28,7 @@ export default function Testimonials() {
               </button>
             </div>
 
-            <div className="flex-1 bg-[#F7F7F8] rounded-[20px] p-10 flex flex-col justify-center gap-6 min-h-[393px]">
+            <div className="flex-1 bg-[#F7F7F8] rounded-[20px] p-10 flex flex-col justify-center gap-6 min-h-[393px] relative">
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-0.5">
                   {[...Array(5)].map((_, i) => (

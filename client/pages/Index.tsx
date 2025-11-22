@@ -41,7 +41,7 @@ export default function Index() {
               </div>
 
               <div className="mt-12 lg:mt-16 space-y-5">
-                <div className="flex items-center gap-[-14px]">
+                <div className="flex items-center">
                   <div className="flex items-center p-2 rounded-full border border-grey-15 bg-[#1A1A1A]">
                     <img
                       src="https://api.builder.io/api/v1/image/assets/TEMP/2c0d09018c3d6d09bfe31c12f390e94d0443cab7?width=100"
