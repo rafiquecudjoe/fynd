@@ -2,9 +2,9 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } 
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white py-16">
+    <footer className="w-full bg-white py-4">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-        <div className="px-6 md:px-20 py-16">
+        <div className="px-6 md:px-20 py-6">
           <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-8">
           <div className="lg:w-[330px] flex flex-col gap-8">
@@ -90,11 +90,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-full h-px bg-[#EAEEF5] my-16"></div>
+        <div className="w-full h-px bg-[#EAEEF5] my-4"></div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-lg text-[#3F3E4D]">Copyright © 2025 Fyndae</p>
-          <p className="text-lg text-[#3F3E4D] text-center md:text-right">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+          <p className="text-sm text-[#3F3E4D]">Copyright © 2025 Fyndae</p>
+          <p className="text-sm text-[#3F3E4D] text-center md:text-right">
             All Rights Reserved | 
             <a href="#" className="text-[#117465] hover:underline"> Terms and Conditions</a> | 
             <a href="#" className="text-[#117465] hover:underline"> Privacy Policy</a>

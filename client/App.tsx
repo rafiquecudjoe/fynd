@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -27,11 +29,11 @@ const App = () => (
           />
           <Route
             path="/about"
-            element={<PlaceholderPage pageName="About Us" />}
+            element={<AboutUs />}
           />
           <Route
             path="/contact"
-            element={<PlaceholderPage pageName="Contact" />}
+            element={<Contact />}
           />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
