@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
     <section className="w-full bg-[#117465] overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 pt-8 md:pt-12 pb-12 md:pb-16 flex flex-col items-center gap-6">
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-center gap-4 text-center">
           <h2 className="text-white text-[32px] md:text-[48px] font-semibold leading-[130%]">
             Get In Touch
           </h2>
@@ -16,7 +16,7 @@ export default function ContactSection() {
       </div>
 
       <div className="bg-white/10 backdrop-blur-sm px-6 md:px-16 py-10 md:py-12 flex flex-col items-center gap-8 md:gap-10">
-        <div className="flex flex-col gap-6 w-full">
+        <div className="flex flex-col gap-6 w-full max-w-[800px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-3">
               <label className="text-[#0A0814] text-lg font-semibold leading-[150%]">
@@ -85,51 +85,10 @@ export default function ContactSection() {
             />
           </div>
 
-          <button className="px-6 py-3 bg-white rounded-lg text-[#117465] text-lg font-medium leading-[150%] hover:bg-white/90 transition-colors w-fit">
-            Send Your Message
-          </button>
-        </div>
-      </div>
-
-      <div className="bg-white/10 backdrop-blur-sm px-6 md:px-16 py-10 flex flex-wrap items-start gap-6">
-        <div className="flex-1 min-w-[200px] flex items-center justify-center gap-3.5 px-8 py-8 rounded-lg border border-white/20 bg-white/5">
-          <div className="flex items-center justify-center p-3 rounded-md border border-white/20">
-            <Mail className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-white/90 text-center text-base leading-[150%]">
-            support@fyndae.com
-          </span>
-        </div>
-
-        <div className="flex-1 min-w-[200px] flex items-center justify-center gap-3.5 px-8 py-8 rounded-lg border border-white/20 bg-white/5">
-          <div className="flex items-center justify-center p-3 rounded-md border border-white/20">
-            <Phone className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-white/90 text-center text-base leading-[150%]">
-            +234 - 898 -853 -99
-          </span>
-        </div>
-
-        <div className="flex-1 min-w-[200px] flex items-center justify-center gap-3.5 px-8 py-8 rounded-lg border border-white/20 bg-white/5">
-          <div className="flex items-center justify-center p-3 rounded-md border border-white/20">
-            <MapPin className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-white/90 text-center text-base leading-[150%]">
-            Johannesburg, South Africa
-          </span>
-        </div>
-
-        <div className="flex items-center justify-center gap-3.5 px-8 py-8 rounded-lg border border-white/20 bg-white/5">
-          <div className="flex items-start gap-2.5">
-            <div className="flex items-center justify-center p-3 rounded-md border border-white/20">
-              <Facebook className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex items-center justify-center p-3 rounded-md border border-white/20">
-              <Twitter className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex items-center justify-center p-3 rounded-md border border-white/20">
-              <Linkedin className="w-5 h-5 text-white" />
-            </div>
+          <div className="flex justify-center">
+            <button className="px-6 py-3 bg-white rounded-lg text-[#117465] text-lg font-medium leading-[150%] hover:bg-white/90 transition-colors">
+              Send Your Message
+            </button>
           </div>
         </div>
       </div>

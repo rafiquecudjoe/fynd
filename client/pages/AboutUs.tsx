@@ -4,6 +4,8 @@ import GlobalCrisisSection from "@/components/about/GlobalCrisisSection";
 import ImpactSection from "@/components/about/ImpactSection";
 import JourneySection from "@/components/about/JourneySection";
 import ValuesSection from "@/components/about/ValuesSection";
+import Testimonials from "@/components/sections/Testimonials";
+import CTASection from "@/components/sections/CTASection";
 import Footer from "@/components/sections/Footer";
 
 export default function AboutUs() {
@@ -15,6 +17,8 @@ export default function AboutUs() {
       <JourneySection />
       <ValuesSection />
       <ImpactSection />
+      <Testimonials />
+      <CTASection />
       <Footer />
     </div>
   );
