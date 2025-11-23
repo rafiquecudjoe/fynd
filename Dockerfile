@@ -46,7 +46,7 @@ COPY --from=builder /app/dist/spa /usr/share/nginx/html
 
 # Create startup script
 RUN echo '#!/bin/sh' > /start.sh && \
-    echo 'PORT=5000 node /app/dist/server/node-build.mjs &' >> /start.sh && \
+    echo 'cd /app && PORT=5000 node dist/server/index.js &' >> /start.sh && \
     echo 'nginx -g "daemon off;"' >> /start.sh && \
     chmod +x /start.sh
 
