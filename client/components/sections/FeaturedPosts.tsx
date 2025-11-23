@@ -1,6 +1,7 @@
 import { Heart, MessageCircle, Share2, Bookmark, Calendar, Clock, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function FeaturedPosts() {
   return (
@@ -24,7 +25,7 @@ export default function FeaturedPosts() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <PostCard
-            image="https://api.builder.io/api/v1/image/assets/TEMP/9e48ae8a218e73dccebeeea16d4e592cdc9e6c73?width=694"
+            image="https://cdn.builder.io/api/v1/image/assets/TEMP/9e48ae8a218e73dccebeeea16d4e592cdc9e6c73?width=694"
             title="Black Samsung A52"
             description="I lost my Samsung A52 on my way home from Ikeja Under Bridge. The phone contains important work files ...."
             date="16th  November, 2025"
@@ -36,7 +37,7 @@ export default function FeaturedPosts() {
             bookmarked={true}
           />
           <PostCard
-            image="https://api.builder.io/api/v1/image/assets/TEMP/7a6cb8f9dca2c1a208be27da3cc61151c432d85a?width=694"
+            image="https://cdn.builder.io/api/v1/image/assets/TEMP/7a6cb8f9dca2c1a208be27da3cc61151c432d85a?width=694"
             title="Red BMW Sport Car"
             description="I've lost my car - a red 2020 BMW with license plate ABC 123 XYZ. It has a noticeable scratch on the left...."
             date="12th October, 2025"
@@ -48,7 +49,7 @@ export default function FeaturedPosts() {
             bookmarked={false}
           />
           <PostCard
-            image="https://api.builder.io/api/v1/image/assets/TEMP/2162c21ee08d99cde54d59630d9d275833a38dcd?width=694"
+            image="https://cdn.builder.io/api/v1/image/assets/TEMP/2162c21ee08d99cde54d59630d9d275833a38dcd?width=694"
             title="German Sherperd Dog"
             description="I am looking for my German Shepherd dog. He is a male, about 3 years old, with a tan fur and a distinctive..."
             date="22nd  November, 2025"
@@ -97,9 +98,11 @@ function PostCard({ image, title, description, date, time, location, price, like
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <div className="relative">
-            <img 
+            <OptimizedImage
               src={image} 
               alt={title}
+              width={694}
+              height={318}
               className="w-full h-[318px] object-cover rounded-[10px]"
             />
             <span className="absolute top-4 right-5 px-4 py-1 bg-[#CFE3E0] text-[#0A463D] text-base rounded-full">

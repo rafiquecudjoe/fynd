@@ -1,10 +1,26 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
+import compression from "compression";
 import { handleDemo } from "./routes/demo";
 
 export function createServer() {
   const app = express();
+
+  // Performance: Enable gzip/brotli compression for all responses
+  // Reduces HTML/CSS/JS size by 60-80%
+  app.use(compression({
+    level: 6, // Balance between speed and compression ratio
+    threshold: 1024, // Only compress responses > 1KB
+    filter: (req, res) => {
+      // Don't compress if client doesn't support it
+      if (req.headers['x-no-compression']) {
+        return false;
+      }
+      // Use compression for all text-based responses
+      return compression.filter(req, res);
+    },
+  }));
 
   // Middleware
   app.use(cors());

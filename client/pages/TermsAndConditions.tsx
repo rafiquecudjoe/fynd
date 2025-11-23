@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
 import { Link } from "react-router-dom";
@@ -8,7 +10,16 @@ export default function TermsAndConditions() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-[#fef9f4]">
+    <>
+      <SEOHead 
+        title="Terms and Conditions - Fyndae | User Agreement & Reward Policy"
+        description="Read Fyndae's terms of service, user agreement, and reward policy. Understand your rights and responsibilities when using our lost item recovery platform."
+        keywords="Fyndae terms and conditions, user agreement, reward policy, service terms"
+        noindex={false}
+      />
+      <StructuredData type="WebPage" />
+      
+      <div className="min-h-screen bg-[#fef9f4]">
       <Navbar />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Hero Section */}
@@ -416,6 +427,7 @@ export default function TermsAndConditions() {
         </div>
       </div>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }

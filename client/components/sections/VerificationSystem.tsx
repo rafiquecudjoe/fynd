@@ -19,9 +19,9 @@ export default function VerificationSystem() {
             </div>
 
             <div className="w-full h-[407px] rounded-3xl border border-[#419084] bg-gradient-to-br from-[#0A463D] to-[#0A463D] p-10 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/5a7a3a8bf403098f323675f23414a002fe961f81?width=1024')", backgroundSize: "100px 100px", backgroundRepeat: "repeat" }}></div>
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/5a7a3a8bf403098f323675f23414a002fe961f81?width=1024')", backgroundSize: "100px 100px", backgroundRepeat: "repeat" }}></div>
               <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/454613b7caaf4eae4f18cf37c04e107cebb027ab?width=900" 
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/454613b7caaf4eae4f18cf37c04e107cebb027ab?width=900" 
                 alt="Verification illustration" 
                 className="w-full max-w-[450px] h-auto object-contain relative z-10"
               />

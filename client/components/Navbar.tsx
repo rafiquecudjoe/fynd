@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +10,12 @@ export default function Navbar() {
     <nav className="w-full px-4 sm:px-6 py-3 bg-white shadow-sm">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
         <Link to="/" className="flex-shrink-0 flex items-center">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/f8f9fbdfa907c4f71c7b4696f0efe937b95cf67b?width=180"
+          <OptimizedImage
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8f9fbdfa907c4f71c7b4696f0efe937b95cf67b?width=180"
             alt="Fyndae Logo"
+            width={90}
+            height={30}
+            priority={true}
             className="w-[90px] h-auto"
           />
         </Link>

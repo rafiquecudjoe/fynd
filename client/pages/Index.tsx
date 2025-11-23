@@ -1,20 +1,42 @@
 import { Link } from "react-router-dom";
-import StatsSection from "@/components/StatsSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import VerificationSystem from "@/components/sections/VerificationSystem";
-import FeaturedPosts from "@/components/sections/FeaturedPosts";
-import Testimonials from "@/components/sections/Testimonials";
-import JoinCommunity from "@/components/sections/JoinCommunity";
-import FAQ from "@/components/sections/FAQ";
-import CTASection from "@/components/sections/CTASection";
-import Footer from "@/components/sections/Footer";
-
+import { lazy, Suspense } from "react";
+import { OptimizedImage } from "@/components/OptimizedImage";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import Navbar from "@/components/Navbar";
+
+// Critical above-the-fold components loaded immediately
+import StatsSection from "@/components/StatsSection";
+
+// Lazy load below-the-fold sections for better LCP
+const HowItWorksSection = lazy(() => import("@/components/HowItWorksSection"));
+const FeaturesSection = lazy(() => import("@/components/FeaturesSection"));
+const VerificationSystem = lazy(() => import("@/components/sections/VerificationSystem"));
+const FeaturedPosts = lazy(() => import("@/components/sections/FeaturedPosts"));
+const Testimonials = lazy(() => import("@/components/sections/Testimonials"));
+const JoinCommunity = lazy(() => import("@/components/sections/JoinCommunity"));
+const FAQ = lazy(() => import("@/components/sections/FAQ"));
+const CTASection = lazy(() => import("@/components/sections/CTASection"));
+const Footer = lazy(() => import("@/components/sections/Footer"));
+
+// Lightweight loading fallback
+const SectionLoader = () => <div className="w-full h-20"></div>;
 
 export default function Index() {
   return (
-    <div className="min-h-screen">
+    <>
+      <SEOHead 
+        title="Fyndae - Find Lost Items in Cape Town, South Africa | Community Rewards Platform"
+        description="Recover lost items in Cape Town & South Africa with Fyndae. Report missing phones, wallets, pets & more. Community-powered platform with verified rewards. Join 100+ active members. Available 24/7."
+        keywords="lost and found Cape Town, find lost items South Africa, recover missing items, lost property Western Cape, lost phone Cape Town, lost wallet finder, missing pet South Africa, community rewards, verify information, lost item recovery, Fyndae"
+        ogImage="https://fyndae.com/og-image.jpg"
+      />
+      <StructuredData type="Organization" />
+      <StructuredData type="WebSite" />
+      <StructuredData type="LocalBusiness" />
+      <StructuredData type="Service" />
+      
+      <div className="min-h-screen">
       {/* Top Part - Hero Section */}
       <div className="w-full bg-gradient-to-br from-[#117465] to-[#0A463D]">
         <Navbar />
@@ -48,24 +70,36 @@ export default function Index() {
               <div className="mt-12 lg:mt-16 space-y-5">
                 <div className="flex items-center">
                   <div className="flex items-center p-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/2c0d09018c3d6d09bfe31c12f390e94d0443cab7?width=100"
-                      alt="Community member"
+                    <OptimizedImage
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c0d09018c3d6d09bfe31c12f390e94d0443cab7?width=100"
+                      alt="Community member 1"
+                      width={100}
+                      height={100}
+                      priority={true}
                       className="w-12 h-12 rounded-full border-2 border-white"
                     />
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/e1507a077e3944e5e57f519bae665fa759b49c57?width=100"
-                      alt="Community member"
+                    <OptimizedImage
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1507a077e3944e5e57f519bae665fa759b49c57?width=100"
+                      alt="Community member 2"
+                      width={100}
+                      height={100}
+                      priority={true}
                       className="w-12 h-12 rounded-full border-2 border-white -ml-3"
                     />
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/16352e3dc99f56dafbb5f2107fd237b2457a0b5e?width=100"
-                      alt="Community member"
+                    <OptimizedImage
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/16352e3dc99f56dafbb5f2107fd237b2457a0b5e?width=100"
+                      alt="Community member 3"
+                      width={100}
+                      height={100}
+                      priority={true}
                       className="w-12 h-12 rounded-full border-2 border-white -ml-3"
                     />
-                    <img
-                      src="https://api.builder.io/api/v1/image/assets/TEMP/ffed7c98a72d0ecd234e6536d810b9cc06b91ae8?width=100"
-                      alt="Community member"
+                    <OptimizedImage
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffed7c98a72d0ecd234e6536d810b9cc06b91ae8?width=100"
+                      alt="Community member 4"
+                      width={100}
+                      height={100}
+                      priority={true}
                       className="w-12 h-12 rounded-full border-2 border-white -ml-3"
                     />
                   </div>
@@ -85,11 +119,13 @@ export default function Index() {
           </div>
 
           <div className="flex-1 min-h-[300px] sm:min-h-[400px] lg:min-h-[744px] rounded-2xl sm:rounded-3xl overflow-hidden">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/2c1210919e26060e9c4a8fb840eee8a67e654090?width=1306"
-              alt="Security and trust illustration"
+            <OptimizedImage
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c1210919e26060e9c4a8fb840eee8a67e654090?width=1306"
+              alt="Security and trust illustration showing community support and recovery"
+              width={1306}
+              height={744}
+              priority={true}
               className="w-full h-full object-cover"
-              loading="lazy"
             />
           </div>
         </div>
@@ -105,17 +141,20 @@ export default function Index() {
 
       {/* Top Part - Sections */}
       <StatsSection />
-      <HowItWorksSection />
-      <FeaturesSection />
-
-      {/* Down Part - Sections */}
-      <VerificationSystem />
-      <FeaturedPosts />
-      <Testimonials />
-      <JoinCommunity />
-      <FAQ />
-      <CTASection />
-      <Footer />
-    </div>
+      
+      {/* Lazy load below-the-fold sections */}
+      <Suspense fallback={<SectionLoader />}>
+        <HowItWorksSection />
+        <FeaturesSection />
+        <VerificationSystem />
+        <FeaturedPosts />
+        <Testimonials />
+        <JoinCommunity />
+        <FAQ />
+        <CTASection />
+        <Footer />
+      </Suspense>
+      </div>
+    </>
   );
 }

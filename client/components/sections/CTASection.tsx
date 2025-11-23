@@ -8,7 +8,7 @@ export default function CTASection() {
       <div 
         className="absolute inset-0 opacity-10" 
         style={{ 
-          backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/5ca02233f3972a18e56ebaceb64105e5e3c2f283?width=2784')", 
+          backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/5ca02233f3972a18e56ebaceb64105e5e3c2f283?width=2784')", 
           backgroundSize: "100px 100px", 
           backgroundRepeat: "repeat" 
         }}

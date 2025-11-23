@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LogIn, Mail, Lock } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 
 function Login() {
   const navigate = useNavigate();
@@ -17,7 +18,14 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-white to-accent/20 flex items-center justify-center p-4">
+    <>
+      <SEOHead 
+        title="Login - Fyndae"
+        description="Sign in to your Fyndae account to report lost items or submit verified tips."
+        noindex={true}
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-primary/10 via-white to-accent/20 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
           <div className="text-center mb-8">
@@ -105,7 +113,8 @@ function Login() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 

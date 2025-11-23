@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { UserPlus, Mail, Lock, User, Phone, MapPin, Calendar, Users, Eye, EyeOff, Check, X, ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
+import SEOHead from '@/components/SEOHead';
 
 type Step = 1 | 2 | 3;
 
@@ -147,7 +148,14 @@ function Register() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-accent/30 via-white to-primary/10 flex items-center justify-center p-4">
+    <>
+      <SEOHead 
+        title="Register - Fyndae | Join Our Community"
+        description="Create your Fyndae account and join our community helping reunite people with their lost items."
+        noindex={true}
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-accent/30 via-white to-primary/10 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
           {/* Header */}
@@ -536,7 +544,8 @@ function Register() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 

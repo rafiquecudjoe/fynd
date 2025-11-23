@@ -1,4 +1,5 @@
 import { Star, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function Testimonials() {
   return (
@@ -58,20 +59,20 @@ export default function Testimonials() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <TestimonialCard
-              image="https://api.builder.io/api/v1/image/assets/TEMP/60de687206acfc081d22acfdcd80f8056a8b3499?width=120"
+              image="https://cdn.builder.io/api/v1/image/assets/TEMP/60de687206acfc081d22acfdcd80f8056a8b3499?width=120"
               name="Thabo k. Pretoria"
               role="Community Member"
               text="I saw a post about a missing dog that matched one I had spotted in my neighbourhood.
 I reported it on Fyndae and connected the dots. The owner was overjoyed and I even got paid"
             />
             <TestimonialCard
-              image="https://api.builder.io/api/v1/image/assets/TEMP/e270d92b790f342ea0ddd29b8de3fb03e043d351?width=120"
+              image="https://cdn.builder.io/api/v1/image/assets/TEMP/e270d92b790f342ea0ddd29b8de3fb03e043d351?width=120"
               name="Ayomide. Lagos"
               role="Grateful User"
               text="My little sister was disciplined and disappeared for 2 weeks. I reported on Fyndae because I was scared for her safety, someone reported seeing her at an estate with her boyfriend. I went over there with my mom and found her. I'm so grateful to the Fyndae community for helping us find her."
             />
             <TestimonialCard
-              image="https://api.builder.io/api/v1/image/assets/TEMP/904edee25d3961e941fab31afdf7c8fc28db7cef?width=120"
+              image="https://cdn.builder.io/api/v1/image/assets/TEMP/904edee25d3961e941fab31afdf7c8fc28db7cef?width=120"
               name="Aisha. Abuja"
               role="Tip Reporter"
               text="I came across a bike recovered by the police. After checking Fyndae, I realized it matched a missing report. I submitted a tip and the owner confirmed it and I got paid, no hassle. It's amazing to be part of something that helps people."
@@ -105,9 +106,11 @@ function TestimonialCard({ image, name, role, text }: TestimonialCardProps) {
   return (
     <div className="flex flex-col border border-[#F7F7F8] bg-[#F7F7F8] rounded-[14px] shadow-[0_0_0_6px_#FFF]">
       <div className="p-5 flex items-center gap-2.5">
-        <img 
+        <OptimizedImage
           src={image} 
           alt={name}
+          width={120}
+          height={120}
           className="w-15 h-15 rounded-full object-cover"
         />
         <div className="flex flex-col gap-0.5">

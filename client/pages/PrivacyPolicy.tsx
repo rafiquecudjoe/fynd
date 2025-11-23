@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import SEOHead from "@/components/SEOHead";
+import StructuredData from "@/components/StructuredData";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
 
@@ -7,7 +9,16 @@ export default function PrivacyPolicy() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-[#fef9f4]">
+    <>
+      <SEOHead 
+        title="Privacy Policy - Fyndae | POPIA Compliant Data Protection"
+        description="Read Fyndae's privacy policy and data protection practices. POPIA compliant. Learn how we protect your personal information and handle data securely."
+        keywords="Fyndae privacy policy, POPIA compliance, data protection South Africa, personal information protection"
+        noindex={false}
+      />
+      <StructuredData type="WebPage" />
+      
+      <div className="min-h-screen bg-[#fef9f4]">
       <Navbar />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Hero Section */}
@@ -321,6 +332,7 @@ export default function PrivacyPolicy() {
         </div>
       </div>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }

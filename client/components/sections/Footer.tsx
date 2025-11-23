@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function Footer() {
   return (
@@ -10,9 +11,11 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-8">
           <div className="lg:w-[330px] flex flex-col gap-8">
             <div className="flex flex-col gap-2">
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/f8f9fbdfa907c4f71c7b4696f0efe937b95cf67b?width=180" 
-                alt="Fyndae Logo" 
+              <OptimizedImage
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8f9fbdfa907c4f71c7b4696f0efe937b95cf67b?width=180" 
+                alt="Fyndae Logo"
+                width={90}
+                height={30}
                 className="w-[90px] h-auto"
               />
               <p className="text-base text-[#3F3E4D] leading-relaxed">
