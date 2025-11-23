@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import StatsSection from "@/components/StatsSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -35,12 +36,12 @@ export default function Index() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 lg:gap-6">
-                  <button className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm text-white font-medium text-base sm:text-lg leading-[150%] hover:bg-white/20 transition-colors">
+                  <Link to="/login" className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm text-white font-medium text-base sm:text-lg leading-[150%] hover:bg-white/20 transition-colors text-center">
                     Join The Community
-                  </button>
-                  <button className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-white text-green-70 font-medium text-base sm:text-lg leading-[150%] hover:bg-white/90 transition-colors">
+                  </Link>
+                  <Link to="/login" className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-white text-green-70 font-medium text-base sm:text-lg leading-[150%] hover:bg-white/90 transition-colors text-center">
                     Report An Item
-                  </button>
+                  </Link>
                 </div>
               </div>
 

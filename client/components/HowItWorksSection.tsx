@@ -102,9 +102,9 @@ export default function HowItWorksSection() {
           </div>
         </div>
 
-        <button className="px-6 py-3 rounded-lg border border-gray-40 bg-[#F7F7F8] text-gray-100 font-medium text-lg leading-[150%] hover:bg-gray-50 transition-colors">
+        <a href="/login" className="px-6 py-3 rounded-lg border border-gray-40 bg-[#F7F7F8] text-gray-100 font-medium text-lg leading-[150%] hover:bg-gray-50 transition-colors">
           Get Started
-        </button>
+        </a>
           </div>
         </div>
       </div>

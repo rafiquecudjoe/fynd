@@ -25,8 +25,8 @@ export default function CTASection() {
           </p>
         </div>
 
-        <Button className="bg-[#F7F7F8] hover:bg-white text-[#0D0B1A] border border-[#B7BECD] px-6 py-3 text-lg font-medium rounded-lg">
-          Get Started
+        <Button asChild className="bg-[#F7F7F8] hover:bg-white text-[#0D0B1A] border border-[#B7BECD] px-6 py-3 text-lg font-medium rounded-lg">
+          <a href="/login">Get Started</a>
         </Button>
         </div>
       </div>

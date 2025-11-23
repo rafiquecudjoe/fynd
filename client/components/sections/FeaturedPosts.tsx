@@ -17,8 +17,8 @@ export default function FeaturedPosts() {
               Highlighted missing item currently receiving high community attention. View details, share leads and help bring it back home.
             </p>
           </div>
-          <Button className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 py-3 text-lg font-medium rounded-lg shrink-0">
-            View All
+          <Button asChild className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 py-3 text-lg font-medium rounded-lg shrink-0">
+            <a href="/login">View All</a>
           </Button>
         </div>
 
@@ -156,8 +156,8 @@ function PostCard({ image, title, description, date, time, location, price, like
             <span className="text-base text-[#3F3E4D]">Price</span>
             <span className="text-2xl font-semibold text-[#100E21]">{price}</span>
           </div>
-          <Button className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 h-12 text-base font-medium rounded-lg">
-            Submit Lead
+          <Button asChild className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 h-12 text-base font-medium rounded-lg">
+            <a href="/login">Submit Lead</a>
           </Button>
         </div>
       </div>

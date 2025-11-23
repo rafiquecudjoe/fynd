@@ -11,7 +11,7 @@ export default function PlaceholderPage({ pageName }: PlaceholderPageProps) {
             {pageName}
           </h1>
           <p className="text-lg text-gray-100 mb-8">
-            This page is coming soon. Continue prompting to add content to this
+            This page is coming soon. Continue to add content to this
             page.
           </p>
           <div className="inline-flex items-center gap-2 text-green-70">

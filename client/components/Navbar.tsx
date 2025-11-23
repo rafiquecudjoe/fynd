@@ -49,9 +49,9 @@ export default function Navbar() {
           <button className="hidden lg:flex px-6 py-2.5 items-center gap-2 rounded-lg border border-gray-300 bg-white text-gray-800 font-medium text-base hover:bg-gray-50 transition-colors whitespace-nowrap h-full">
             Search Database
           </button>
-          <button className="flex px-4 lg:px-6 py-2.5 items-center gap-2 rounded-lg bg-green-70 text-white font-medium text-sm lg:text-base hover:bg-green-70/90 transition-colors whitespace-nowrap h-full">
+          <Link to="/login" className="flex px-4 lg:px-6 py-2.5 items-center gap-2 rounded-lg bg-green-70 text-white font-medium text-sm lg:text-base hover:bg-green-70/90 transition-colors whitespace-nowrap h-full">
             Register / Login
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -99,9 +99,13 @@ export default function Navbar() {
             <button className="w-full px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-800 font-medium text-base leading-[150%] hover:bg-gray-50 transition-colors">
               Search Database
             </button>
-            <button className="w-full px-6 py-3 rounded-lg bg-green-70 text-white font-medium text-base leading-[150%] hover:bg-green-70/90 transition-colors">
+            <Link
+              to="/login"
+              className="w-full px-6 py-3 rounded-lg bg-green-70 text-white font-medium text-base leading-[150%] hover:bg-green-70/90 transition-colors text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Register / Login
-            </button>
+            </Link>
           </div>
         </div>
       )}

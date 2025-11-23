@@ -39,8 +39,8 @@ export default function JoinCommunity() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <Button className="bg-[#F7F7F8] hover:bg-white text-[#0D0B1A] border border-[#B7BECD] px-6 py-3 text-lg font-medium rounded-lg">
-            Join Our Community
+          <Button asChild className="bg-[#F7F7F8] hover:bg-white text-[#0D0B1A] border border-[#B7BECD] px-6 py-3 text-lg font-medium rounded-lg">
+            <a href="/login">Join Our Community</a>
           </Button>
         </div>
           </div>

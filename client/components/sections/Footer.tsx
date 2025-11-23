@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -23,13 +24,13 @@ export default function Footer() {
               <a href="#" className="hover:opacity-70 transition-opacity">
                 <Facebook className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
               </a>
-              <a href="#" className="hover:opacity-70 transition-opacity">
+              <a href="https://x.com/FyndaeInfo" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <Twitter className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
               </a>
-              <a href="#" className="hover:opacity-70 transition-opacity">
+              <a href="https://www.instagram.com/fyndae_world/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <Instagram className="w-6 h-6 text-[#0A463D]" strokeWidth={1.5} />
               </a>
-              <a href="#" className="hover:opacity-70 transition-opacity">
+              <a href="https://www.linkedin.com/company/fyndae01" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <Linkedin className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
               </a>
               <a href="#" className="hover:opacity-70 transition-opacity">
@@ -42,29 +43,29 @@ export default function Footer() {
             <div className="flex flex-col gap-10">
               <h3 className="text-xl font-semibold text-[#0A0814]">Navigation</h3>
               <nav className="flex flex-col gap-4">
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Home</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Features</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">About Us</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Contact</a>
+                <Link to="/" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Home</Link>
+                <a href="/#features" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Features</a>
+                <a href="/#about" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">About Us</a>
+                <a href="mailto:Info@fyndae.com" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Contact</a>
               </nav>
             </div>
 
             <div className="flex flex-col gap-10">
               <h3 className="text-xl font-semibold text-[#0A0814]">Company</h3>
               <nav className="flex flex-col gap-4">
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">How It Works</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Report An Item</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Join The Community</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">FAQ</a>
+                <a href="/#how-it-works" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">How It Works</a>
+                <Link to="/login" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Report An Item</Link>
+                <Link to="/login" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Join The Community</Link>
+                <a href="/#faq" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">FAQ</a>
               </nav>
             </div>
 
             <div className="flex flex-col gap-10">
               <h3 className="text-xl font-semibold text-[#0A0814]">Legal</h3>
               <nav className="flex flex-col gap-4">
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Privacy Policy</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Terms & Condition</a>
-                <a href="#" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Reward Policy</a>
+                <Link to="/privacy-policy" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Privacy Policy</Link>
+                <Link to="/terms-and-conditions" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Terms & Condition</Link>
+                <Link to="/terms-and-conditions" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Reward Policy</Link>
               </nav>
             </div>
 
@@ -96,8 +97,8 @@ export default function Footer() {
           <p className="text-sm text-[#3F3E4D]">Copyright © 2025 Fyndae</p>
           <p className="text-sm text-[#3F3E4D] text-center md:text-right">
             All Rights Reserved | 
-            <a href="#" className="text-[#117465] hover:underline"> Terms and Conditions</a> | 
-            <a href="#" className="text-[#117465] hover:underline"> Privacy Policy</a>
+            <Link to="/terms-and-conditions" className="text-[#117465] hover:underline"> Terms and Conditions</Link> | 
+            <Link to="/privacy-policy" className="text-[#117465] hover:underline"> Privacy Policy</Link>
           </p>
         </div>
         </div>
