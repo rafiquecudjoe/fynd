@@ -3,30 +3,27 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 export default function FeaturesSection() {
   return (
     <section className="w-full bg-white py-8 md:py-16 lg:py-20">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-        <div className="px-6 md:px-20">
-          <div className="max-w-[1232px] mx-auto space-y-16">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-4 sm:px-6">
+        <div className="md:px-6 lg:px-20">
+          <div className="max-w-[1232px] mx-auto space-y-8 md:space-y-16">
             {/* Header */}
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="space-y-5 flex-1 text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl font-semibold leading-[140%] tracking-[-0.042em] text-[#0A0814]">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-center md:justify-between gap-5 md:gap-6">
+          <div className="space-y-2.5 md:space-y-5 flex-1 text-center md:text-left">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[140%] tracking-[-2px] md:tracking-[-0.042em] text-[#0A0814]">
               Features That Make <span className="text-green-70">Fyndae</span>{" "}
               Stand Out
             </h2>
-            <p className="text-gray-100 text-lg md:text-xl leading-[150%]">
+            <p className="text-gray-100 text-sm md:text-lg lg:text-xl leading-[130%] md:leading-[150%]">
               People who've lost valuable items with a network of community
               helpers ready to act. Track progress, stay informed and trust our
               secure escrow system to reward verified leads when your item is
               found.
             </p>
           </div>
-          <button className="px-6 py-3 rounded-lg bg-green-70 text-white font-medium text-lg leading-[150%] hover:bg-green-70/90 transition-colors whitespace-nowrap">
-            View All
-          </button>
         </div>
 
         {/* Features Grid */}
-        <div className="space-y-6">
+        <div className="space-y-6 md:space-y-6">
           {/* Top Row - 2 columns */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Fast & Easy Lost Item Reporting */}
