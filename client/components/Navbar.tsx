@@ -10,14 +10,17 @@ export default function Navbar() {
     <nav className="w-full px-4 sm:px-6 py-3 bg-white shadow-sm">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between gap-8">
         <Link to="/" className="flex-shrink-0 flex items-center">
-          <OptimizedImage
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8f9fbdfa907c4f71c7b4696f0efe937b95cf67b?width=180"
-            alt="Fyndae Logo"
-            width={90}
-            height={30}
-            priority={true}
-            className="w-[90px] h-auto"
-          />
+          <picture>
+            <source srcSet="/images/fyndae-logo.webp" type="image/webp" />
+            <img
+              src="/images/fyndae-logo.png"
+              alt="Fyndae Logo"
+              width={90}
+              height={30}
+              loading="eager"
+              className="w-[90px] h-auto"
+            />
+          </picture>
         </Link>
 
         {/* Desktop Menu */}
@@ -27,12 +30,6 @@ export default function Navbar() {
             className="text-gray-800 font-medium text-base hover:text-green-600 transition-colors flex items-center h-full"
           >
             Home
-          </Link>
-          <Link
-            to="/features"
-            className="text-gray-800 font-medium text-base hover:text-green-600 transition-colors flex items-center h-full"
-          >
-            Features
           </Link>
           <Link
             to="/about"

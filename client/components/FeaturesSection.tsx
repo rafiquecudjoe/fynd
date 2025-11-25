@@ -42,13 +42,17 @@ export default function FeaturesSection() {
                 </p>
               </div>
               <div className="relative">
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/f026f7fba1c1589450d30dcb0c4bfb374e9774cd?width=1208"
-                  alt="Person reporting lost item"
-                  width={1208}
-                  height={800}
-                  className="w-full h-auto"
-                />
+                <picture>
+                  <source srcSet="/images/feature-reporting.webp" type="image/webp" />
+                  <img
+                    src="/images/feature-reporting.png"
+                    alt="Person reporting lost item"
+                    width={1208}
+                    height={800}
+                    className="w-full h-auto mix-blend-multiply opacity-90"
+                    loading="lazy"
+                  />
+                </picture>
                 {/* Floating Widget */}
                 <div className="absolute -top-8 md:-top-12 lg:-top-16 right-4 md:right-8 w-[220px] md:w-[270px] bg-white rounded-xl border-2 border-[#0A463D] shadow-[4px_4px_0_2px_#0A463D] p-4 z-10">
                   <div className="space-y-4">
@@ -136,7 +140,7 @@ export default function FeaturesSection() {
               className="bg-green-70 rounded-[32px] p-8 md:p-10 flex flex-col gap-5 relative"
               style={{
                 backgroundImage:
-                  "url('https://cdn.builder.io/api/v1/image/assets/TEMP/69894cf3f32b01e3de7e376405c615f7946b0139?width=1208')",
+                  "url('/images/cdn/pattern-green.png')",
                 backgroundSize: "100px 100px",
               }}
             >
@@ -342,96 +346,122 @@ export default function FeaturesSection() {
               </div>
               <div className="relative">
                 <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e53cddcf73a465e4ad7feb022a2db76972a0469?width=1376"
+                  src="/images/cdn/network-map.png"
                   alt="Community network map"
                   width={1376}
                   height={800}
                   className="w-full h-auto mix-blend-darken"
                 />
                 {/* Profile Images on Network */}
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0b146abed2ad6067e4c7b08d3c0414bf8c251525?width=116"
+                <picture>
+                  <source srcSet="/images/cdn/profile-1.webp" type="image/webp" />
+                  <img
+                    src="/images/cdn/profile-1.png"
+                    alt=""
+                    className="absolute w-14 h-14 rounded-full border border-white object-cover"
+                    style={{ right: "0%", top: "30%" }}
+                    loading="lazy"
+                  />
+                </picture>
+                <picture>
+                  <source srcSet="/images/cdn/profile-2.webp" type="image/webp" />
+                  <img
+                    src="/images/cdn/profile-2.png"
+                    alt=""
+                    className="absolute w-14 h-14 rounded-full border border-white object-cover"
+                    style={{ right: "20%", top: "30%" }}
+                    loading="lazy"
+                  />
+                </picture>
+                <picture>
+                  <source srcSet="/images/cdn/profile-3.webp" type="image/webp" />
+                  <img
+                    src="/images/cdn/profile-3.png"
+                    alt=""
+                    className="absolute w-14 h-14 rounded-full border border-white object-cover"
+                    style={{ left: "18%", top: "35%" }}
+                    loading="lazy"
+                  />
+                </picture>
+                <picture>
+                  <source srcSet="/images/cdn/profile-4.webp" type="image/webp" />
+                  <img
+                    src="/images/cdn/profile-4.png"
+                    alt=""
+                    className="absolute w-14 h-14 rounded-full border border-white object-cover"
+                    style={{ left: "0%", top: "30%" }}
+                    loading="lazy"
+                  />
+                </picture>
+                <img
+                  src="/images/cdn/profile-5.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
-                  style={{ right: "0%", top: "30%" }}
-                />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/162936f3d30ffb639b79aa58a226630f81deec92?width=116"
-                  alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
-                  style={{ right: "20%", top: "30%" }}
-                />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb25ec1e5dcba8066b577569a9be63a6c8f4d8b0?width=116"
-                  alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
-                  style={{ left: "18%", top: "35%" }}
-                />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/c8486eeff7d971319e3abfd02a983b9f4b25353c?width=116"
-                  alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
-                  style={{ left: "0%", top: "30%" }}
-                />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7e1dd152444253ac613a0d91a5129dee7d1e6630?width=116"
-                  alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ left: "18%", top: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fc4843ac760850c602a4611fb02b7c0ca6e1b3b?width=116"
+                <img
+                  src="/images/cdn/profile-6.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ right: "22%", top: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/eedeac567ecdaf0202ce3697dde290f7ee3465ae?width=116"
+                <img
+                  src="/images/cdn/profile-7.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ right: "0%", top: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/6215363a5de86601488cb8e627f51b1cb8609c52?width=116"
+                <img
+                  src="/images/cdn/profile-8.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ left: "0%", bottom: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bbfab3e4b5cb1fc6cda3cc320bd35c922953f188?width=116"
+                <img
+                  src="/images/cdn/profile-9.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ left: "18%", bottom: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/99566f785cfebe16f2b2414b138282c01c9619c9?width=116"
+                <img
+                  src="/images/cdn/profile-10.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ left: "48%", bottom: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/931b9356df75b52360cb1b8df65f82d7867a39aa?width=116"
+                <img
+                  src="/images/cdn/profile-11.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ left: "48%", top: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/22506835410625bf68fd0bd43cd2ed8f0329a3bf?width=116"
+                <img
+                  src="/images/cdn/profile-12.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ right: "22%", bottom: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c9ca2a9be21abded2f8b6add529a52fa4f9e266?width=116"
+                <img
+                  src="/images/cdn/profile-13.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ right: "0%", bottom: "0%" }}
+                  loading="lazy"
                 />
-                <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/69b1588a7f690ff3296704a3d01dc4175b34cb7b?width=116"
+                <img
+                  src="/images/cdn/profile-14.png"
                   alt=""
-                  className="absolute w-14 h-14 rounded-full border border-white"
+                  className="absolute w-14 h-14 rounded-full border border-white object-cover"
                   style={{ left: "2%", top: "0%" }}
+                  loading="lazy"
                 />
                 {/* Search Icon */}
                 <div
@@ -796,7 +826,7 @@ export default function FeaturesSection() {
               className="bg-green-70 rounded-[32px] p-8 md:p-10 flex flex-col gap-6 relative min-h-[531px]"
               style={{
                 backgroundImage:
-                  "url('https://cdn.builder.io/api/v1/image/assets/TEMP/53a2a5c3011f6e164d2235d7ae5faea15fc45e8c?width=822')",
+                  "url('/images/cdn/pattern-reward.png')",
                 backgroundSize: "100px 100px",
               }}
             >
@@ -811,7 +841,7 @@ export default function FeaturesSection() {
               </div>
               {/* Money Icon */}
               <OptimizedImage
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d407bc6e1565e807c2cc09716b14f495a1a9ee38?width=281"
+                src="/images/cdn/reward-icon.png"
                 alt="Money icon"
                 width={281}
                 height={281}
@@ -851,7 +881,7 @@ export default function FeaturesSection() {
               </div>
               <div className="mt-auto">
                 <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e3029607b0d8e3317fad3a46853787de4e041c2a?width=662"
+                  src="/images/cdn/feature-verification-1.png"
                   alt="Happy person with phone"
                   width={662}
                   height={500}
@@ -873,7 +903,7 @@ export default function FeaturesSection() {
               </div>
               <div className="mt-auto flex items-center justify-center">
                 <OptimizedImage
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2ae552802ace22515b4b98d1e323601055362b5?width=540"
+                  src="/images/cdn/feature-verification-2.png"
                   alt="Security shield"
                   width={540}
                   height={540}

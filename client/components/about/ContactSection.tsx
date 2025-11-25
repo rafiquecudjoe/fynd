@@ -15,7 +15,7 @@ export default function ContactSection() {
         </p>
       </div>
 
-      <div className="bg-white/10 backdrop-blur-sm px-6 md:px-16 py-10 md:py-12 flex flex-col items-center gap-8 md:gap-10">
+      <div className="bg-white px-6 md:px-16 py-10 md:py-12 flex flex-col items-center gap-8 md:gap-10">
         <div className="flex flex-col gap-6 w-full max-w-[800px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-3">
@@ -86,7 +86,7 @@ export default function ContactSection() {
           </div>
 
           <div className="flex justify-center">
-            <button className="px-6 py-3 bg-white rounded-lg text-[#117465] text-lg font-medium leading-[150%] hover:bg-white/90 transition-colors">
+            <button className="px-6 py-3 bg-[#117465] rounded-lg text-white text-lg font-medium leading-[150%] hover:bg-[#0A463D] transition-colors">
               Send Your Message
             </button>
           </div>

@@ -11,13 +11,17 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-8">
           <div className="lg:w-[330px] flex flex-col gap-8">
             <div className="flex flex-col gap-2">
-              <OptimizedImage
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8f9fbdfa907c4f71c7b4696f0efe937b95cf67b?width=180" 
-                alt="Fyndae Logo"
-                width={90}
-                height={30}
-                className="w-[90px] h-auto"
-              />
+              <picture>
+                <source srcSet="/images/fyndae-logo.webp" type="image/webp" />
+                <img 
+                  src="/images/fyndae-logo.png"
+                  alt="Fyndae Logo"
+                  width={90}
+                  height={30}
+                  className="w-[90px] h-auto"
+                  loading="lazy"
+                />
+              </picture>
               <p className="text-base text-[#3F3E4D] leading-relaxed">
                 Helping you recover what matters most. We connect people, technology and community to securely track, verify and recover missing items.
               </p>

@@ -46,7 +46,6 @@ export function OptimizedImage({
         height={height}
         loading="eager"
         decoding="sync"
-        fetchPriority="high"
         onError={() => setError(true)}
         className={cn(className, error && 'opacity-50')}
         {...props}
@@ -55,7 +54,7 @@ export function OptimizedImage({
   }
 
   return (
-    <div className={cn('relative overflow-hidden bg-gray-100', className)} style={{ aspectRatio: width && height ? `${width}/${height}` : undefined }}>
+    <div className={cn('relative overflow-hidden', className)} style={{ aspectRatio: width && height ? `${width}/${height}` : undefined }}>
       <img
         src={optimizedSrc}
         alt={alt}

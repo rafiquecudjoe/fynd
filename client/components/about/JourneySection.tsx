@@ -19,11 +19,15 @@ export default function JourneySection() {
           </p>
         </div>
         <div className="flex-1">
-          <img
-            src="/images/our_journey_graphic.png"
-            alt="Team collaboration"
-            className="w-full h-auto object-cover rounded-xl"
-          />
+          <picture>
+            <source srcSet="/images/our_journey_graphic.webp" type="image/webp" />
+            <img
+              src="/images/our_journey_graphic.png"
+              alt="Team collaboration"
+              className="w-full h-auto object-cover rounded-xl"
+              loading="lazy"
+            />
+          </picture>
         </div>
       </div>
       </div>

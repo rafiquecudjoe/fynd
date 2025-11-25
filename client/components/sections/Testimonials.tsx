@@ -21,11 +21,15 @@ export default function Testimonials() {
         <div className="flex flex-col gap-5 mt-12">
           <div className="flex flex-col lg:flex-row items-start gap-5">
             <div className="w-full lg:w-[353px] h-[393px] rounded-[20px] bg-gradient-to-br from-[#117465] to-[#117465] flex items-center justify-center relative overflow-hidden">
-              <img 
-                src="/images/lerato-testimonial.png" 
-                alt="Lerato D testimonial video"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <picture>
+                <source srcSet="/images/lerato-testimonial.webp" type="image/webp" />
+                <img 
+                  src="/images/lerato-testimonial.png" 
+                  alt="Lerato D testimonial video"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
               <button className="flex items-center justify-center w-[52px] h-[52px] rounded-full bg-white hover:bg-gray-100 transition-colors relative z-10">
                 <Play className="w-7 h-7 text-[#117465] fill-[#117465] ml-1" />
               </button>
@@ -59,20 +63,20 @@ export default function Testimonials() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <TestimonialCard
-              image="https://cdn.builder.io/api/v1/image/assets/TEMP/60de687206acfc081d22acfdcd80f8056a8b3499?width=120"
+              image="/images/cdn/testimonial-thabo.png"
               name="Thabo k. Pretoria"
               role="Community Member"
               text="I saw a post about a missing dog that matched one I had spotted in my neighbourhood.
 I reported it on Fyndae and connected the dots. The owner was overjoyed and I even got paid"
             />
             <TestimonialCard
-              image="https://cdn.builder.io/api/v1/image/assets/TEMP/e270d92b790f342ea0ddd29b8de3fb03e043d351?width=120"
+              image="/images/cdn/testimonial-ayomide.png"
               name="Ayomide. Lagos"
               role="Grateful User"
               text="My little sister was disciplined and disappeared for 2 weeks. I reported on Fyndae because I was scared for her safety, someone reported seeing her at an estate with her boyfriend. I went over there with my mom and found her. I'm so grateful to the Fyndae community for helping us find her."
             />
             <TestimonialCard
-              image="https://cdn.builder.io/api/v1/image/assets/TEMP/904edee25d3961e941fab31afdf7c8fc28db7cef?width=120"
+              image="/images/cdn/testimonial-aisha.png"
               name="Aisha. Abuja"
               role="Tip Reporter"
               text="I came across a bike recovered by the police. After checking Fyndae, I realized it matched a missing report. I submitted a tip and the owner confirmed it and I got paid, no hassle. It's amazing to be part of something that helps people."

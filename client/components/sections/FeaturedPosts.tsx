@@ -25,7 +25,7 @@ export default function FeaturedPosts() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <PostCard
-            image="https://cdn.builder.io/api/v1/image/assets/TEMP/9e48ae8a218e73dccebeeea16d4e592cdc9e6c73?width=694"
+            image="/images/cdn/post-1.png"
             title="Black Samsung A52"
             description="I lost my Samsung A52 on my way home from Ikeja Under Bridge. The phone contains important work files ...."
             date="16th  November, 2025"
@@ -37,7 +37,7 @@ export default function FeaturedPosts() {
             bookmarked={true}
           />
           <PostCard
-            image="https://cdn.builder.io/api/v1/image/assets/TEMP/7a6cb8f9dca2c1a208be27da3cc61151c432d85a?width=694"
+            image="/images/cdn/post-2.png"
             title="Red BMW Sport Car"
             description="I've lost my car - a red 2020 BMW with license plate ABC 123 XYZ. It has a noticeable scratch on the left...."
             date="12th October, 2025"
@@ -49,7 +49,7 @@ export default function FeaturedPosts() {
             bookmarked={false}
           />
           <PostCard
-            image="https://cdn.builder.io/api/v1/image/assets/TEMP/2162c21ee08d99cde54d59630d9d275833a38dcd?width=694"
+            image="/images/cdn/post-3.png"
             title="German Sherperd Dog"
             description="I am looking for my German Shepherd dog. He is a male, about 3 years old, with a tan fur and a distinctive..."
             date="22nd  November, 2025"

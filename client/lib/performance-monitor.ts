@@ -23,13 +23,13 @@ class PerformanceMonitor {
   private initObservers() {
     // Largest Contentful Paint (LCP)
     this.observeLCP();
-    
+
     // Cumulative Layout Shift (CLS)
     this.observeCLS();
-    
+
     // First Input Delay (FID) / Interaction to Next Paint (INP)
     this.observeINP();
-    
+
     // Long Tasks
     this.observeLongTasks();
   }
@@ -39,11 +39,11 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1] as any;
-        
+
         const value = lastEntry.renderTime || lastEntry.loadTime;
         this.recordMetric('LCP', value, this.rateLCP(value));
       });
-      
+
       observer.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(observer);
     } catch (e) {
@@ -54,17 +54,17 @@ class PerformanceMonitor {
   private observeCLS() {
     try {
       let clsValue = 0;
-      
+
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries() as any[]) {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
         }
-        
+
         this.recordMetric('CLS', clsValue, this.rateCLS(clsValue));
       });
-      
+
       observer.observe({ type: 'layout-shift', buffered: true });
       this.observers.push(observer);
     } catch (e) {
@@ -80,7 +80,7 @@ class PerformanceMonitor {
           this.recordMetric('INP', duration, this.rateINP(duration));
         }
       });
-      
+
       observer.observe({ type: 'event', buffered: true, durationThreshold: 40 } as any);
       this.observers.push(observer);
     } catch (e) {
@@ -91,7 +91,7 @@ class PerformanceMonitor {
           const value = entry.processingStart - entry.startTime;
           this.recordMetric('FID', value, this.rateFID(value));
         });
-        
+
         fidObserver.observe({ type: 'first-input', buffered: true });
         this.observers.push(fidObserver);
       } catch (e2) {
@@ -104,12 +104,16 @@ class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.duration > 50) {
-            console.warn(`Long task detected: ${entry.duration.toFixed(2)}ms`, entry);
+          // Only warn for tasks longer than 100ms (was 50ms)
+          if (entry.duration > 100) {
+            // Only log in development to avoid console noise
+            if (process.env.NODE_ENV === 'development') {
+              console.warn(`Long task detected: ${entry.duration.toFixed(2)}ms`, entry);
+            }
           }
         }
       });
-      
+
       observer.observe({ type: 'longtask', buffered: true });
       this.observers.push(observer);
     } catch (e) {
@@ -124,15 +128,15 @@ class PerformanceMonitor {
       rating,
       timestamp: Date.now(),
     };
-    
+
     this.metrics.push(metric);
-    
+
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
       console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
     }
-    
+
     // Send to analytics in production
     this.sendToAnalytics(metric);
   }

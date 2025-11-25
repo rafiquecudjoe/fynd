@@ -38,11 +38,15 @@ export default function HeroSection() {
         </div>
         
         <div className="w-full mt-8 -mb-8 md:-mb-12">
-          <img
-            src="/images/hero_image.png"
-            alt="Fyndae team working"
-            className="w-full h-auto object-cover rounded-t-2xl"
-          />
+          <picture>
+            <source srcSet="/images/hero_image.webp" type="image/webp" />
+            <img
+              src="/images/hero_image.png"
+              alt="Fyndae team working"
+              className="w-full h-auto object-cover rounded-t-2xl"
+              loading="lazy"
+            />
+          </picture>
         </div>
       </div>
     </section>

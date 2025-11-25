@@ -71,7 +71,7 @@ export default function Index() {
                 <div className="flex items-center">
                   <div className="flex items-center p-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
                     <OptimizedImage
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c0d09018c3d6d09bfe31c12f390e94d0443cab7?width=100"
+                      src="/images/cdn/avatar-1.png"
                       alt="Community member 1"
                       width={100}
                       height={100}
@@ -79,7 +79,7 @@ export default function Index() {
                       className="w-12 h-12 rounded-full border-2 border-white"
                     />
                     <OptimizedImage
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1507a077e3944e5e57f519bae665fa759b49c57?width=100"
+                      src="/images/cdn/avatar-2.png"
                       alt="Community member 2"
                       width={100}
                       height={100}
@@ -87,7 +87,7 @@ export default function Index() {
                       className="w-12 h-12 rounded-full border-2 border-white -ml-3"
                     />
                     <OptimizedImage
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/16352e3dc99f56dafbb5f2107fd237b2457a0b5e?width=100"
+                      src="/images/cdn/avatar-3.png"
                       alt="Community member 3"
                       width={100}
                       height={100}
@@ -95,7 +95,7 @@ export default function Index() {
                       className="w-12 h-12 rounded-full border-2 border-white -ml-3"
                     />
                     <OptimizedImage
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffed7c98a72d0ecd234e6536d810b9cc06b91ae8?width=100"
+                      src="/images/cdn/avatar-4.png"
                       alt="Community member 4"
                       width={100}
                       height={100}
@@ -120,7 +120,7 @@ export default function Index() {
 
           <div className="flex-1 min-h-[300px] sm:min-h-[400px] lg:min-h-[744px] rounded-2xl sm:rounded-3xl overflow-hidden">
             <OptimizedImage
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c1210919e26060e9c4a8fb840eee8a67e654090?width=1306"
+              src="/images/cdn/hero-illustration.png"
               alt="Security and trust illustration showing community support and recovery"
               width={1306}
               height={744}
