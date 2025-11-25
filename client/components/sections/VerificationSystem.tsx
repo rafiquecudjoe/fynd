@@ -1,9 +1,23 @@
 import { Search, Shield, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function VerificationSystem() {
+interface VerificationSystemProps {
+  title?: string;
+  description?: string;
+  className?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+export default function VerificationSystem({
+  title = "Our Verification System",
+  description = "Fyndae offers a paid verification lookup system allowing users to securely search our database for key information about individuals, businesses and institutions to ensure users always have clarity before taking the next step.",
+  className = "bg-white",
+  ctaText = "Search Database",
+  ctaLink = "/search-entities",
+}: VerificationSystemProps) {
   return (
-    <section className="w-full bg-white py-8 md:py-16 lg:py-20">
+    <section className={`w-full py-8 md:py-16 lg:py-20 ${className}`}>
       <div className="max-w-[1440px] mx-auto px-6 md:px-4 sm:px-6">
         <div className="md:px-6 lg:px-20">
           <div className="max-w-7xl mx-auto">
@@ -12,13 +26,10 @@ export default function VerificationSystem() {
               {/* Header - Mobile */}
               <div className="flex flex-col gap-5 text-center">
                 <h2 className="text-2xl font-semibold leading-[140%] tracking-[-2px] text-[#0A0814]">
-                  Our Verification System
+                  {title}
                 </h2>
                 <p className="text-sm text-[#21242C] leading-[130%]">
-                  Fyndae offers a paid verification lookup system allowing users
-                  to securely search our database for key information about
-                  individuals, businesses and institutions to ensure users
-                  always have clarity before taking the next step.
+                  {description}
                 </p>
               </div>
 
@@ -96,9 +107,11 @@ export default function VerificationSystem() {
 
               {/* Button - Mobile */}
               <div className="flex justify-center">
-                <Button className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 py-3 text-sm font-medium rounded-lg leading-[150%]">
-                  Search Database
-                </Button>
+                <a href={ctaLink}>
+                  <Button className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 py-3 text-sm font-medium rounded-lg leading-[150%]">
+                    {ctaText}
+                  </Button>
+                </a>
               </div>
             </div>
 
@@ -107,13 +120,10 @@ export default function VerificationSystem() {
               <div className="flex-1 flex flex-col gap-10">
                 <div className="flex flex-col gap-5 text-center">
                   <h2 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight text-[#0A0814]">
-                    Our Verification System
+                    {title}
                   </h2>
                   <p className="text-lg md:text-xl text-[#21242C] leading-relaxed">
-                    Fyndae offers a paid verification lookup system allowing
-                    users to securely search our database for key information
-                    about individuals, businesses and institutions to ensure
-                    users always have clarity before taking the next step.
+                    {description}
                   </p>
                 </div>
 
@@ -157,9 +167,11 @@ export default function VerificationSystem() {
             </div>
 
             <div className="mt-16 hidden md:flex justify-center">
-              <Button className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 py-3 text-lg font-medium rounded-lg">
-                Search Database
-              </Button>
+              <a href={ctaLink}>
+                <Button className="bg-[#117465] hover:bg-[#0A463D] text-white px-6 py-3 text-lg font-medium rounded-lg">
+                  {ctaText}
+                </Button>
+              </a>
             </div>
           </div>
         </div>

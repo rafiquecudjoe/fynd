@@ -47,9 +47,12 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4 flex-shrink-0 h-full">
-          <button className="hidden lg:flex px-6 py-2.5 items-center gap-2 rounded-lg border border-gray-300 bg-white text-gray-800 font-medium text-base hover:bg-gray-50 transition-colors whitespace-nowrap h-full">
+          <Link
+            to="/search-database"
+            className="hidden lg:flex px-6 py-2.5 items-center gap-2 rounded-lg border border-gray-300 bg-white text-gray-800 font-medium text-base hover:bg-gray-50 transition-colors whitespace-nowrap h-full"
+          >
             Search Database
-          </button>
+          </Link>
           <Link
             to="/login"
             className="flex px-4 lg:px-6 py-2.5 items-center gap-2 rounded-lg bg-green-70 text-white font-medium text-sm lg:text-base hover:bg-green-70/90 transition-colors whitespace-nowrap h-full"
@@ -117,9 +120,13 @@ export default function Navbar() {
             Contact
           </Link>
           <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
-            <button className="w-full px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-800 font-medium text-base leading-[150%] hover:bg-gray-50 transition-colors">
+            <Link
+              to="/search-database"
+              className="w-full px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-800 font-medium text-base leading-[150%] hover:bg-gray-50 transition-colors text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Search Database
-            </button>
+            </Link>
             <Link
               to="/login"
               className="w-full px-6 py-3 rounded-lg bg-green-70 text-white font-medium text-base leading-[150%] hover:bg-green-70/90 transition-colors text-center"

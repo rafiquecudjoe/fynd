@@ -20,6 +20,8 @@ const Login = lazy(() => import("./pages/Login"));
 const Register = lazy(() => import("./pages/Register"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const SearchDatabase = lazy(() => import("./pages/SearchDatabase"));
+const SearchEntities = lazy(() => import("./pages/SearchEntities"));
 
 // Performance monitoring
 import './lib/performance-monitor';
@@ -59,6 +61,8 @@ const App = () => (
             <Route path="/register" element={<Register />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/search-database" element={<SearchDatabase />} />
+            <Route path="/search-entities" element={<SearchEntities />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

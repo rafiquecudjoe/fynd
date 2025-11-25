@@ -43,20 +43,23 @@ export default function Index() {
         <div className="w-full bg-gradient-to-br from-[#117465] via-[#0A463D] to-[#0A463D] md:bg-gradient-to-br md:from-[#117465] md:to-[#0A463D]">
           <Navbar />
           <div className="max-w-[1440px] mx-auto px-6 md:px-4 lg:px-6 py-10 md:py-12 lg:py-16 xl:py-20">
-            <div className="flex flex-col lg:flex-row items-stretch gap-16 md:gap-4 lg:gap-6">
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
               <div className="flex-1 flex flex-col justify-center">
-                <div className="max-w-[640px] md:mx-0 mx-auto">
-                  <div className="space-y-10 md:space-y-8 lg:space-y-12">
-                    <div className="space-y-4 md:space-y-3 lg:space-y-4">
-                      <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-[48px] font-semibold leading-[140%] tracking-[-0.083em] md:tracking-[-0.04em] text-center md:text-left">
-                        <span className="text-white">Your </span>
-                        <span className="text-[#E5FDC5]">Trusted Platform</span>
-                        <span className="text-white">
-                          {" "}
-                          To Recover Lost Items and Verify Information
+                <div className="max-w-[800px] md:mx-0 mx-auto">
+                  <div className="space-y-8 md:space-y-10">
+                    <div className="space-y-8">
+                      <h1 className="flex flex-col gap-4 text-3xl md:text-5xl lg:text-[48px] font-bold leading-[140%] tracking-[-2px] text-center md:text-left text-white py-2">
+                        <span className="block">
+                          Your <span className="text-[#E5FDC5]">Trusted Platform</span> To
+                        </span>
+                        <span className="block">
+                          Recover Lost Items and
+                        </span>
+                        <span className="block">
+                          Verify Information
                         </span>
                       </h1>
-                      <p className="text-sm md:text-base lg:text-lg xl:text-xl text-white leading-[130%] md:leading-[150%] text-center md:text-left">
+                      <p className="text-base md:text-lg text-white/80 leading-[160%] text-center md:text-left max-w-[540px]">
                         From locating lost items to confirming the identity or
                         credibility of people and organizations, Fyndae gives
                         you the information you need to move confidently and
@@ -64,82 +67,81 @@ export default function Index() {
                       </p>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 md:gap-3 lg:gap-4 xl:gap-6 justify-center md:justify-start">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 justify-center md:justify-start">
                       <Link
                         to="/login"
-                        className="w-full sm:w-auto px-4 py-2 rounded-lg border border-[#B7BECD] bg-[#F7F7F8] text-[#0D0B1A] font-medium text-sm md:text-base lg:text-lg leading-[150%] hover:bg-white transition-colors text-center"
+                        className="px-8 py-4 rounded-xl bg-[#F7F7F8] border border-[#B7BECD] text-[#0D0B1A] font-semibold text-base hover:bg-white transition-colors text-center"
                       >
                         Join The Community
                       </Link>
                       <Link
                         to="/login"
-                        className="w-full sm:w-auto px-4 py-2 rounded-lg bg-[#E5FDC5] text-[#21242C] font-medium text-sm md:text-base lg:text-lg leading-[150%] hover:bg-[#E5FDC5]/90 transition-colors text-center"
+                        className="px-8 py-4 rounded-xl bg-[#E5FDC5] text-[#21242C] font-semibold text-base hover:bg-[#dbfcb0] transition-colors text-center"
                       >
                         Report An Item
                       </Link>
                     </div>
                   </div>
 
-                  <div className="mt-10 md:mt-12 lg:mt-16 space-y-2 flex flex-col items-center md:items-start">
-                    <div className="flex items-center justify-center md:justify-start">
-                      <div className="flex items-center py-2 px-2 gap-[-14px] rounded-full border border-[#262626] bg-[#1A1A1A]">
+                  <div className="mt-12 md:mt-16 space-y-4 flex flex-col items-center md:items-start">
+                    <div className="flex items-center p-2 rounded-full border border-[#262626] bg-[#1A1A1A] w-fit">
+                      <div className="flex items-center pl-2">
                         <OptimizedImage
                           src="/images/cdn/avatar-1.png"
                           alt="Community member 1"
-                          width={100}
-                          height={100}
-                          priority={true}
-                          className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2]"
+                          width={48}
+                          height={48}
+                          className="w-10 h-10 rounded-full border-2 border-[#1A1A1A]"
                         />
                         <OptimizedImage
                           src="/images/cdn/avatar-2.png"
                           alt="Community member 2"
-                          width={100}
-                          height={100}
-                          priority={true}
-                          className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2] -ml-3.5 md:-ml-3"
+                          width={48}
+                          height={48}
+                          className="w-10 h-10 rounded-full border-2 border-[#1A1A1A] -ml-4"
                         />
                         <OptimizedImage
                           src="/images/cdn/avatar-3.png"
                           alt="Community member 3"
-                          width={100}
-                          height={100}
-                          priority={true}
-                          className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2] -ml-3.5 md:-ml-3"
+                          width={48}
+                          height={48}
+                          className="w-10 h-10 rounded-full border-2 border-[#1A1A1A] -ml-4"
                         />
                         <OptimizedImage
                           src="/images/cdn/avatar-4.png"
                           alt="Community member 4"
-                          width={100}
-                          height={100}
-                          priority={true}
-                          className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2] -ml-3.5 md:-ml-3"
+                          width={48}
+                          height={48}
+                          className="w-10 h-10 rounded-full border-2 border-[#1A1A1A] -ml-4"
                         />
                       </div>
                     </div>
 
-                    <div className="space-y-2 text-center md:text-left">
-                      <h3 className="text-base md:text-xl font-medium text-white leading-[150%] tracking-[-0.03em]">
+                    <div className="space-y-1 text-center md:text-left">
+                      <h3 className="text-lg font-bold text-white leading-[140%]">
                         100+ Active Community Members
                       </h3>
-                      <p className="text-sm md:text-base text-white leading-[130%] md:leading-[150%]">
-                        Trusted by 100+ active community members helping recover
-                        lost items
+                      <p className="text-sm text-white/70 leading-[150%]">
+                        Trusted by 100+ active community members helping recover lost items
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex-1 min-h-[403px] md:min-h-[300px] lg:min-h-[400px] xl:min-h-[744px] rounded-3xl md:rounded-2xl lg:rounded-3xl overflow-hidden">
-                <OptimizedImage
-                  src="/images/cdn/hero-illustration.png"
-                  alt="Security and trust illustration showing community support and recovery"
-                  width={1306}
-                  height={744}
-                  priority={true}
-                  className="w-full h-full object-cover"
-                />
+              <div className="flex-1 w-full max-w-[640px] lg:max-w-none">
+                <div className="relative aspect-square md:aspect-[4/3] lg:aspect-square w-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                  <OptimizedImage
+                    src="/images/cdn/hero-illustration.png"
+                    alt="Security and trust illustration showing community support and recovery"
+                    width={800}
+                    height={800}
+                    priority={true}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Overlay gradient if needed */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A463D]/50 to-transparent pointer-events-none" />
+                </div>
               </div>
             </div>
           </div>
