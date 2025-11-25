@@ -3,23 +3,77 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function Testimonials() {
   return (
-    <section className="w-full bg-white py-20">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-        <div className="px-6 md:px-20 py-20">
-          <div className="max-w-7xl mx-auto flex flex-col gap-15">
-        <div className="flex flex-col items-center justify-center gap-5 text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
+    <section className="w-full bg-white py-10 md:py-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-4 sm:px-6">
+        <div className="md:px-6 lg:px-20">
+          <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-15">
+        {/* Header */}
+        <div className="flex flex-col items-center justify-center gap-4 md:gap-5 text-center">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[140%] tracking-[-2px] md:tracking-tight">
             <span className="text-[#0A0814]">Real Stories From The </span>
             <span className="text-[#117465]">Fyndae</span>
             <span className="text-[#0A0814]"> Community</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#21242C] max-w-4xl">
+          <p className="text-sm md:text-lg lg:text-xl text-[#21242C] leading-[130%] md:leading-relaxed max-w-4xl">
             Don't take our word for it. Hear it from the people who trusted us and got their missing items back
           </p>
         </div>
 
-        <div className="flex flex-col gap-5 mt-12">
-          <div className="flex flex-col lg:flex-row items-start gap-5">
+        {/* Testimonials */}
+        <div className="flex flex-col gap-5 md:gap-5 mt-6 md:mt-12">
+          {/* Mobile: Video + Card Stack */}
+          <div className="flex flex-col gap-5 md:hidden">
+            {/* Video Card */}
+            <div className="w-full h-[393px] rounded-[20px] bg-gradient-to-br from-[#117465] to-[#117465] flex items-center justify-center relative overflow-hidden">
+              <picture>
+                <source srcSet="/images/lerato-testimonial.webp" type="image/webp" />
+                <img 
+                  src="/images/lerato-testimonial.png" 
+                  alt="Lerato D testimonial video"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </picture>
+              <button className="flex items-center justify-center w-[52px] h-[52px] rounded-full bg-white hover:bg-gray-100 transition-colors relative z-10">
+                <Play className="w-7 h-7 text-[#117465] fill-[#117465] ml-1" />
+              </button>
+            </div>
+
+            {/* Testimonial Card */}
+            <div className="bg-[#F7F7F8] rounded-[20px] p-10 flex flex-col justify-center gap-6 relative">
+              {/* Quote Icon */}
+              <svg className="w-10 h-7 absolute right-7 top-7 opacity-100" viewBox="0 0 40 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clipPath="url(#clip0_4065_718)">
+                  <path d="M8.48735 18.7635C7.73161 22.928 6.47698 25.9193 5.47673 27.7721C5.08651 28.4963 5.88424 29.3024 6.59305 28.8857C14.963 23.9871 18.6331 16.8413 19.09 11.1117C19.4827 6.1684 16.1263 1.07877 11.0386 0.151127C5.94845 -0.774035 1.07564 2.61657 0.151957 7.72853C-0.816183 13.086 2.94524 18.2327 8.48735 18.7635Z" fill="#117465"/>
+                  <path d="M29.3716 18.7642C28.6159 22.9286 27.3612 25.9199 26.361 27.7727C25.9708 28.497 26.7685 29.3031 27.4773 28.8864C35.8473 23.9877 39.5173 16.8419 39.9742 11.1124C40.3669 6.16906 37.0105 1.07943 31.9228 0.151783C26.8352 -0.77586 21.9599 2.61723 21.0387 7.72671C20.0705 13.0842 23.832 18.2309 29.3741 18.7617L29.3716 18.7642Z" fill="#117465"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4065_718">
+                    <rect width="40" height="29" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-[#0A463D] text-[#0A463D]" />
+                  ))}
+                </div>
+                <p className="text-sm text-[#100E21] leading-[150%]">
+                  My work laptop was stolen and I was devastated. A friend told me about Fyndae and I gave it a shot. Within two days, I got an anonymous tip that led to it's recovery. I am still amazed. This is the real game changer.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-0.5">
+                <h4 className="text-base font-semibold text-[#1D1D1D] leading-[150%]">Lerato D. CapeTown</h4>
+                <p className="text-sm text-[#3F3E4D] leading-[130%]">Fyndae User</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Side by Side */}
+          <div className="hidden md:flex flex-col lg:flex-row items-start gap-5">
             <div className="w-full lg:w-[353px] h-[393px] rounded-[20px] bg-gradient-to-br from-[#117465] to-[#117465] flex items-center justify-center relative overflow-hidden">
               <picture>
                 <source srcSet="/images/lerato-testimonial.webp" type="image/webp" />
@@ -60,31 +114,10 @@ export default function Testimonials() {
               </svg>
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <TestimonialCard
-              image="/images/cdn/testimonial-thabo.png"
-              name="Thabo k. Pretoria"
-              role="Community Member"
-              text="I saw a post about a missing dog that matched one I had spotted in my neighbourhood.
-I reported it on Fyndae and connected the dots. The owner was overjoyed and I even got paid"
-            />
-            <TestimonialCard
-              image="/images/cdn/testimonial-ayomide.png"
-              name="Ayomide. Lagos"
-              role="Grateful User"
-              text="My little sister was disciplined and disappeared for 2 weeks. I reported on Fyndae because I was scared for her safety, someone reported seeing her at an estate with her boyfriend. I went over there with my mom and found her. I'm so grateful to the Fyndae community for helping us find her."
-            />
-            <TestimonialCard
-              image="/images/cdn/testimonial-aisha.png"
-              name="Aisha. Abuja"
-              role="Tip Reporter"
-              text="I came across a bike recovered by the police. After checking Fyndae, I realized it matched a missing report. I submitted a tip and the owner confirmed it and I got paid, no hassle. It's amazing to be part of something that helps people."
-            />
-          </div>
         </div>
 
-        <div className="flex items-center justify-center gap-4 mt-8">
+        {/* Navigation Buttons */}
+        <div className="flex items-center justify-center gap-4 mt-5 md:mt-8">
           <button className="flex items-center justify-center w-11 h-11 rounded-full border-[1.5px] border-[#CFE3E0] hover:bg-[#CFE3E0]/20 transition-colors">
             <ChevronLeft className="w-8 h-8 text-[#CFE3E0]" />
           </button>
@@ -96,40 +129,5 @@ I reported it on Fyndae and connected the dots. The owner was overjoyed and I ev
         </div>
       </div>
     </section>
-  );
-}
-
-interface TestimonialCardProps {
-  image: string;
-  name: string;
-  role: string;
-  text: string;
-}
-
-function TestimonialCard({ image, name, role, text }: TestimonialCardProps) {
-  return (
-    <div className="flex flex-col border border-[#F7F7F8] bg-[#F7F7F8] rounded-[14px] shadow-[0_0_0_6px_#FFF]">
-      <div className="p-5 flex items-center gap-2.5">
-        <OptimizedImage
-          src={image} 
-          alt={name}
-          width={120}
-          height={120}
-          className="w-15 h-15 rounded-full object-cover"
-        />
-        <div className="flex flex-col gap-0.5">
-          <h4 className="text-xl font-semibold text-[#1D1D1D]">{name}</h4>
-          <p className="text-base text-[#3F3E4D]">{role}</p>
-        </div>
-      </div>
-      <div className="p-6 flex flex-col gap-5 bg-[#F7F7F8]">
-        <div className="flex items-center gap-0.5">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-6 h-6 fill-[#0A463D] text-[#0A463D]" />
-          ))}
-        </div>
-        <p className="text-base text-[#100E21] leading-relaxed">{text}</p>
-      </div>
-    </div>
   );
 }

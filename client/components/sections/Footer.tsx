@@ -1,15 +1,19 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { OptimizedImage } from "@/components/OptimizedImage";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white py-4">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-        <div className="px-6 md:px-20 py-6">
+    <footer className="w-full bg-white py-4 md:py-4">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-4 sm:px-6">
+        <div className="md:px-6 lg:px-20">
           <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-8">
-          <div className="lg:w-[330px] flex flex-col gap-8">
+        {/* Divider - Top */}
+        <div className="w-full h-px bg-transparent md:bg-[#EAEEF5] mb-8"></div>
+
+        {/* Main Content */}
+        <div className="flex flex-col gap-8 md:gap-8 lg:flex-row lg:items-start lg:gap-8">
+          {/* Left Column - Logo & Social */}
+          <div className="lg:w-[330px] flex flex-col gap-8 md:gap-8">
             <div className="flex flex-col gap-2">
               <picture>
                 <source srcSet="/images/fyndae-logo.webp" type="image/webp" />
@@ -17,96 +21,104 @@ export default function Footer() {
                   src="/images/fyndae-logo.png"
                   alt="Fyndae Logo"
                   width={90}
-                  height={30}
+                  height={57}
                   className="w-[90px] h-auto"
                   loading="lazy"
                 />
               </picture>
-              <p className="text-base text-[#3F3E4D] leading-relaxed">
+              <p className="text-sm md:text-base text-[#3F3E4D] leading-[140%] md:leading-relaxed">
                 Helping you recover what matters most. We connect people, technology and community to securely track, verify and recover missing items.
               </p>
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-[22px] md:gap-5">
               <a href="#" className="hover:opacity-70 transition-opacity">
-                <Facebook className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
+                <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.31436 18.3945V10.1839H10.2091L10.6424 6.98403H7.31428V4.94106C7.31428 4.01463 7.58446 3.38332 8.97991 3.38332L10.7596 3.38252V0.520603C10.4518 0.481677 9.39527 0.394531 8.16629 0.394531C5.60026 0.394531 3.84352 1.88571 3.84352 4.62426V6.98403H0.941406V10.1839H3.84352V18.3945H7.31436V18.3945Z" fill="#0A463D"/>
+                </svg>
               </a>
               <a href="https://x.com/FyndaeInfo" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                <Twitter className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
+                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.8747 0.0960151V0.0927734H13.7187L14.0271 0.154365C14.2327 0.194352 14.4193 0.246753 14.5871 0.311587C14.7548 0.376421 14.9171 0.452065 15.074 0.538505C15.2309 0.624944 15.3732 0.713021 15.5009 0.802702C15.6275 0.891313 15.7411 0.985322 15.8417 1.08473C15.9412 1.18522 16.0965 1.21115 16.3075 1.16253C16.5185 1.1139 16.7458 1.04636 16.9892 0.959923C17.2327 0.873484 17.4735 0.776233 17.7115 0.668172C17.9496 0.56011 18.0946 0.4915 18.1465 0.462325C18.1974 0.43208 18.2244 0.415872 18.2277 0.4137L18.2309 0.408837L18.2471 0.400733L18.2633 0.392629L18.2796 0.384525L18.2958 0.376421L18.2991 0.371558L18.3039 0.368316L18.3088 0.365075L18.312 0.360212L18.3283 0.35535L18.3445 0.352108L18.3413 0.376421L18.3364 0.400733L18.3283 0.425046L18.3202 0.449358L18.312 0.465567L18.3039 0.481775L18.2958 0.506088C18.2904 0.522296 18.285 0.543902 18.2796 0.570921C18.2742 0.597941 18.2228 0.705986 18.1254 0.89509C18.028 1.08419 17.9063 1.27599 17.7602 1.47049C17.6141 1.66499 17.4832 1.81193 17.3674 1.91136C17.2506 2.01185 17.1732 2.08208 17.1353 2.12207C17.0974 2.16312 17.0515 2.20094 16.9973 2.23552L16.9162 2.28901L16.9 2.29712L16.8837 2.30522L16.8805 2.31008L16.8756 2.31333L16.8707 2.31657L16.8675 2.32143L16.8513 2.32953L16.835 2.33764L16.8318 2.3425L16.8269 2.34574L16.822 2.34898L16.8188 2.35385L16.8156 2.35871L16.8107 2.36195L16.8058 2.36519L16.8026 2.37005H16.8837L17.3382 2.2728C17.6412 2.20797 17.9306 2.12964 18.2065 2.03778L18.6448 1.89191L18.6935 1.8757L18.7178 1.86759L18.734 1.85949L18.7503 1.85139L18.7665 1.84328L18.7827 1.83518L18.8152 1.83031L18.8477 1.82707V1.85949L18.8395 1.86273L18.8314 1.86759L18.8282 1.87246L18.8233 1.8757L18.8184 1.87894L18.8152 1.8838L18.812 1.88867L18.8071 1.89191L18.8022 1.89515L18.799 1.90001L18.7957 1.90487L18.7908 1.90812L18.7827 1.92432L18.7746 1.94053L18.7697 1.94377C18.7676 1.94702 18.6989 2.03885 18.5636 2.21932C18.4284 2.40085 18.3553 2.49269 18.3445 2.49486C18.3337 2.4981 18.3185 2.51431 18.2991 2.54348C18.2807 2.57373 18.166 2.69422 17.955 2.90493C17.744 3.11564 17.5373 3.30311 17.335 3.46736C17.1315 3.63269 17.0287 3.83583 17.0266 4.0768C17.0233 4.31668 17.0109 4.58792 16.9892 4.89046C16.9676 5.19302 16.927 5.51988 16.8675 5.87107C16.808 6.22226 16.716 6.61936 16.5916 7.06239C16.4671 7.50541 16.3156 7.93764 16.1371 8.35906C15.9586 8.78048 15.7719 9.15867 15.5771 9.49365C15.3824 9.82863 15.2038 10.1123 15.0415 10.3446C14.8792 10.5769 14.7142 10.7957 14.5465 11.001C14.3788 11.2063 14.1667 11.4376 13.9103 11.6948C13.6527 11.9508 13.5121 12.0913 13.4882 12.1162C13.4634 12.1399 13.3573 12.2286 13.1701 12.382C12.984 12.5365 12.7838 12.691 12.5696 12.8455C12.3564 12.999 12.1606 13.127 11.982 13.2297C11.8035 13.3323 11.5882 13.4496 11.336 13.5814C11.085 13.7143 10.8134 13.8375 10.5212 13.951C10.2291 14.0644 9.9207 14.1698 9.59608 14.267C9.27146 14.3643 8.95767 14.4399 8.65469 14.4939C8.35172 14.548 8.00817 14.5939 7.62403 14.6317L7.04784 14.6884V14.6965H5.99283V14.6884L5.85487 14.6803C5.76291 14.6749 5.68716 14.6695 5.62764 14.6641C5.56814 14.6587 5.3436 14.629 4.95406 14.575C4.56452 14.521 4.25884 14.4669 4.03702 14.4129C3.81521 14.3589 3.48517 14.2562 3.04693 14.1049C2.6087 13.9537 2.23377 13.8008 1.92214 13.6462C1.61159 13.4928 1.41682 13.3955 1.33783 13.3545C1.25992 13.3145 1.17227 13.2648 1.07489 13.2054L0.92881 13.1162L0.925581 13.1114L0.920695 13.1081L0.915826 13.1049L0.91258 13.1L0.896349 13.0919L0.880118 13.0838L0.876888 13.079L0.872003 13.0757L0.867133 13.0725L0.863887 13.0676L0.860657 13.0627L0.855772 13.0595H0.847656V13.0271L0.863887 13.0303L0.880118 13.0352L0.953157 13.0433C1.00185 13.0487 1.13441 13.0568 1.35081 13.0676C1.56723 13.0784 1.79716 13.0784 2.04062 13.0676C2.28409 13.0568 2.53297 13.0325 2.78724 12.9947C3.04153 12.9569 3.3418 12.892 3.68805 12.8002C4.03432 12.7083 4.35245 12.5992 4.64244 12.4728C4.93135 12.3453 5.13693 12.2502 5.25921 12.1875C5.38039 12.1259 5.56543 12.0114 5.81429 11.8439L6.1876 11.5926L6.19085 11.5878L6.19572 11.5845L6.2006 11.5813L6.20383 11.5764L6.20708 11.5716L6.21195 11.5683L6.21683 11.5651L6.22006 11.5602L6.23629 11.5554L6.25253 11.5521L6.25577 11.5359L6.26064 11.5197L6.26553 11.5165L6.26876 11.5116L6.13891 11.5035C6.05235 11.4981 5.96849 11.4927 5.88733 11.4873C5.80618 11.4819 5.67904 11.4576 5.50591 11.4143C5.33279 11.3711 5.14613 11.3063 4.94594 11.2198C4.74577 11.1334 4.551 11.0307 4.36163 10.9119C4.17228 10.793 4.03539 10.6941 3.95099 10.6153C3.86768 10.5375 3.75947 10.4273 3.62638 10.2846C3.49437 10.1409 3.37967 9.9934 3.28228 9.84213C3.1849 9.69086 3.09185 9.51633 3.00313 9.3186L2.8684 9.02361L2.86028 8.99929L2.85216 8.97498L2.8473 8.95877L2.84405 8.94256L2.8684 8.94581L2.89274 8.95067L3.07128 8.97498C3.19032 8.99119 3.37697 8.99659 3.63125 8.99119C3.88553 8.98579 4.06136 8.97498 4.15875 8.95877C4.25613 8.94256 4.31565 8.93175 4.33729 8.92636L4.36975 8.91825L4.41033 8.91015L4.4509 8.90204L4.45415 8.89718L4.45902 8.89394L4.4639 8.8907L4.46713 8.88583L4.43467 8.87773L4.40221 8.86963L4.36975 8.86152L4.33729 8.85342L4.30482 8.84531C4.28319 8.83992 4.24532 8.82911 4.19121 8.8129C4.13711 8.79669 3.99103 8.73725 3.75298 8.6346C3.51493 8.53196 3.32557 8.432 3.1849 8.33475C3.04388 8.23722 2.90941 8.13055 2.78237 8.01544C2.65577 7.89874 2.51674 7.74854 2.36524 7.56485C2.21376 7.38116 2.07851 7.16774 1.95947 6.92462C1.84045 6.68149 1.75118 6.44918 1.69166 6.22766C1.63238 6.00744 1.59327 5.7823 1.57481 5.55501L1.54558 5.21463L1.56181 5.21787L1.57804 5.22273L1.59427 5.23084L1.61051 5.23894L1.62674 5.24705L1.64297 5.25515L1.89455 5.36861C2.06227 5.44425 2.27057 5.50909 2.51943 5.56311C2.76832 5.61713 2.91709 5.64686 2.96578 5.65226L3.03882 5.66036H3.1849L3.18167 5.6555L3.17678 5.65226L3.17191 5.64902L3.16867 5.64415L3.16544 5.63929L3.16055 5.63605L3.15568 5.63281L3.15244 5.62794L3.1362 5.61984L3.11997 5.61174L3.11674 5.60687L3.11186 5.60363L3.10699 5.60039L3.10374 5.59553L3.08751 5.58742L3.07128 5.57932L3.06805 5.57446C3.06481 5.57229 3.01827 5.53771 2.92845 5.47072C2.83972 5.40265 2.74666 5.31459 2.64928 5.20653C2.55189 5.09846 2.45451 4.98501 2.35712 4.86615C2.25956 4.74702 2.17266 4.61957 2.09743 4.48525C2.0217 4.35019 1.94161 4.17836 1.85721 3.96982C1.7739 3.76236 1.7106 3.55327 1.66731 3.34256C1.62404 3.13185 1.5997 2.92385 1.59427 2.71854C1.58887 2.51322 1.59427 2.33764 1.61051 2.19176C1.62674 2.04589 1.6592 1.8811 1.70789 1.69741C1.75658 1.51372 1.82693 1.31922 1.91889 1.1139L2.05685 0.805943L2.06497 0.781631L2.07308 0.757318L2.07797 0.754076L2.0812 0.749214L2.08445 0.744351L2.08932 0.74111L2.0942 0.744351L2.09743 0.749214L2.10068 0.754076L2.10555 0.757318L2.11043 0.76056L2.11366 0.765422L2.11691 0.770285L2.12178 0.773527L2.12989 0.789735L2.13801 0.805943L2.14289 0.809185L2.14612 0.814048L2.36524 1.05717C2.51132 1.21926 2.68445 1.40026 2.88463 1.60016C3.08482 1.80005 3.19572 1.90379 3.21736 1.91136C3.23901 1.92 3.26605 1.94484 3.29851 1.98592C3.33097 2.0259 3.43919 2.12153 3.62313 2.2728C3.80709 2.42408 4.04784 2.59968 4.3454 2.79958C4.64298 2.99948 4.973 3.19668 5.33548 3.39118C5.69798 3.58569 6.08752 3.76127 6.5041 3.91796C6.9207 4.07464 7.21286 4.17729 7.38057 4.22592C7.5483 4.27454 7.83503 4.33667 8.2408 4.41231C8.64657 4.48796 8.95227 4.53658 9.15785 4.55819C9.36344 4.5798 9.50411 4.59223 9.57985 4.59547L9.69346 4.59871L9.69023 4.5744L9.68535 4.55009L9.65289 4.34748C9.63125 4.21242 9.62042 4.02331 9.62042 3.78019C9.62042 3.53706 9.63937 3.31285 9.67723 3.10754C9.71512 2.90223 9.77192 2.69422 9.84766 2.48351C9.92341 2.2728 9.99753 2.10369 10.07 1.97619C10.1436 1.84976 10.2399 1.70551 10.3589 1.54343C10.478 1.38134 10.6322 1.21386 10.8215 1.04097C11.0109 0.86807 11.2273 0.71409 11.4707 0.579026C11.7142 0.443961 11.9387 0.341297 12.1443 0.271066C12.3499 0.200835 12.5231 0.1549 12.6637 0.133294C12.8044 0.111689 12.8747 0.0992568 12.8747 0.0960151Z" fill="#0A463D"/>
+                </svg>
               </a>
               <a href="https://www.instagram.com/fyndae_world/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                <Instagram className="w-6 h-6 text-[#0A463D]" strokeWidth={1.5} />
+                <svg width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 0C12.5951 0 14.3928 -0.000195332 15.6875 0.856445C16.2657 1.239 16.761 1.73434 17.1436 2.3125C18.0002 3.60723 18 5.40493 18 9C18 12.5951 18.0002 14.3928 17.1436 15.6875C16.761 16.2657 16.2657 16.761 15.6875 17.1436C14.3928 18.0002 12.5951 18 9 18C5.40493 18 3.60723 18.0002 2.3125 17.1436C1.73434 16.761 1.239 16.2657 0.856445 15.6875C-0.000195332 14.3928 0 12.5951 0 9C0 5.40493 -0.000195531 3.60723 0.856445 2.3125C1.239 1.73434 1.73434 1.239 2.3125 0.856445C3.60723 -0.000195531 5.40493 0 9 0ZM9 4.34082C6.42675 4.34082 4.34094 6.42678 4.34082 9C4.34082 11.5733 6.42668 13.6592 9 13.6592C11.5732 13.6591 13.6592 11.5733 13.6592 9C13.6591 6.42684 11.5732 4.34091 9 4.34082ZM9 5.91699C10.7025 5.91708 12.0829 7.29746 12.083 9C12.083 10.7026 10.7026 12.0829 9 12.083C7.2973 12.083 5.91699 10.7027 5.91699 9C5.91711 7.29741 7.29738 5.91699 9 5.91699ZM13.8438 3.01172C13.2392 3.01172 12.7482 3.50192 12.748 4.10645C12.748 4.7111 13.2391 5.20117 13.8438 5.20117C14.4482 5.20092 14.9385 4.71094 14.9385 4.10645C14.9383 3.50208 14.4481 3.01198 13.8438 3.01172Z" fill="#0A463D"/>
+                </svg>
               </a>
               <a href="https://www.linkedin.com/company/fyndae01" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
-                <Linkedin className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.851562 2.81458C0.851562 2.23737 1.05427 1.76118 1.45967 1.38601C1.86507 1.01083 2.39211 0.823242 3.04075 0.823242C3.67782 0.823242 4.19326 1.00793 4.58708 1.37735C4.99248 1.75831 5.19519 2.25469 5.19519 2.86653C5.19519 3.42064 4.99829 3.88239 4.60446 4.25181C4.19906 4.63276 3.66623 4.82324 3.006 4.82324H2.98863C2.35156 4.82324 1.83612 4.63276 1.4423 4.25181C1.04847 3.87086 0.851562 3.39178 0.851562 2.81458ZM1.07743 17.9661V6.399H4.93457V17.9661H1.07743ZM7.07164 17.9661H10.9288V11.5072C10.9288 11.1032 10.9751 10.7915 11.0678 10.5722C11.2299 10.1797 11.4761 9.84776 11.8062 9.57649C12.1363 9.3052 12.5504 9.16956 13.0485 9.16956C14.3458 9.16956 14.9944 10.0411 14.9944 11.7843V17.9661H18.8516V11.3341C18.8516 9.62554 18.4462 8.32973 17.6353 7.44662C16.8245 6.5635 15.7531 6.12194 14.4211 6.12194C12.9269 6.12194 11.7628 6.76263 10.9288 8.04402V8.07865H10.9114L10.9288 8.04402V6.399H7.07164C7.0948 6.7684 7.10639 7.91702 7.10639 9.84488C7.10639 11.7727 7.0948 14.4798 7.07164 17.9661Z" fill="#0A463D"/>
+                </svg>
               </a>
               <a href="#" className="hover:opacity-70 transition-opacity">
-                <Youtube className="w-6 h-6 text-[#0A463D] fill-[#0A463D]" />
+                <svg width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.2879 14.3747L7.22568 14.2988C5.91044 14.2723 4.59191 14.3251 3.30246 14.051C1.34089 13.6415 1.20193 11.6336 1.05652 9.94939C0.856153 7.58155 0.933719 5.17074 1.31183 2.82266C1.52528 1.50514 2.36532 0.718973 3.6644 0.633423C8.04975 0.322948 12.4643 0.359743 16.8399 0.50459C17.302 0.517869 17.7673 0.590445 18.223 0.673056C20.4723 1.07597 20.5271 3.35137 20.673 5.26683C20.8184 7.20205 20.757 9.14721 20.479 11.0693C20.2561 12.6607 19.8295 13.9952 18.0291 14.124C15.7733 14.2925 13.5693 14.4281 11.3072 14.3849C11.3073 14.3747 11.2943 14.3747 11.2879 14.3747ZM8.8997 10.3457C10.5996 9.34831 12.2671 8.36752 13.9573 7.3768C12.2542 6.37939 10.5899 5.3986 8.8997 4.40788V10.3457Z" fill="#0A463D"/>
+                </svg>
               </a>
             </div>
           </div>
 
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-            <div className="flex flex-col gap-10">
-              <h3 className="text-xl font-semibold text-[#0A0814]">Navigation</h3>
-              <nav className="flex flex-col gap-4">
-                <Link to="/" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Home</Link>
-                <a href="/#features" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Features</a>
-                <a href="/#about" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">About Us</a>
-                <a href="mailto:Info@fyndae.com" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Contact</a>
+          {/* Right Columns - Navigation */}
+          <div className="flex-1 grid grid-cols-2 gap-6 md:gap-8 lg:grid-cols-4 lg:gap-6">
+            <div className="flex flex-col gap-4 md:gap-10">
+              <h3 className="text-base md:text-xl font-semibold text-[#0A0814]">Navigation</h3>
+              <nav className="flex flex-col gap-[18px] md:gap-4">
+                <Link to="/" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Home</Link>
+                <a href="/#features" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Features</a>
+                <a href="/#about" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">About Us</a>
+                <a href="mailto:Info@fyndae.com" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Contact</a>
               </nav>
             </div>
 
-            <div className="flex flex-col gap-10">
-              <h3 className="text-xl font-semibold text-[#0A0814]">Company</h3>
-              <nav className="flex flex-col gap-4">
-                <a href="/#how-it-works" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">How It Works</a>
-                <Link to="/login" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Report An Item</Link>
-                <Link to="/login" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Join The Community</Link>
-                <a href="/#faq" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">FAQ</a>
+            <div className="flex flex-col gap-4 md:gap-10">
+              <h3 className="text-base md:text-xl font-semibold text-[#0A0814]">Company</h3>
+              <nav className="flex flex-col gap-[18px] md:gap-4">
+                <a href="/#how-it-works" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">How It Works</a>
+                <Link to="/login" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Report An Item</Link>
+                <Link to="/login" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Join The Community</Link>
+                <a href="/#faq" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">FAQ</a>
               </nav>
             </div>
 
-            <div className="flex flex-col gap-10">
-              <h3 className="text-xl font-semibold text-[#0A0814]">Legal</h3>
-              <nav className="flex flex-col gap-4">
-                <Link to="/privacy-policy" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Privacy Policy</Link>
-                <Link to="/terms-and-conditions" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Terms & Condition</Link>
-                <Link to="/terms-and-conditions" className="text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">Reward Policy</Link>
+            <div className="flex flex-col gap-4 md:gap-10 col-span-2 lg:col-span-1">
+              <h3 className="text-base md:text-xl font-semibold text-[#0A0814]">Legal</h3>
+              <nav className="flex flex-col gap-[18px] md:gap-4">
+                <Link to="/privacy-policy" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Privacy policy</Link>
+                <Link to="/terms-and-conditions" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Terms & Condition</Link>
+                <Link to="/terms-and-conditions" className="text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">Reward Policy</Link>
               </nav>
             </div>
 
-            <div className="flex flex-col gap-7">
-              <h3 className="text-xl font-bold text-[#170F49]">Contacts us</h3>
-              <div className="flex flex-col gap-0">
-                <a href="mailto:Info@fyndae.com" className="flex items-center gap-1.5 text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">
-                  <Mail className="w-5 h-5 text-[#117465]" strokeWidth={1.4} />
+            <div className="flex flex-col gap-4 md:gap-7 col-span-2 lg:col-span-1">
+              <h3 className="text-base md:text-xl font-semibold text-[#0A0814]">Contact Us</h3>
+              <div className="flex flex-col gap-[18px] md:gap-0">
+                <a href="mailto:Info@fyndae.com" className="flex items-center gap-1.5 text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">
+                  <Mail className="w-4 h-4 text-[#117465]" strokeWidth={1.4} />
                   <span>Info@fyndae.com</span>
                 </a>
               </div>
-              <div className="flex flex-col gap-0">
-                <a href="tel:+27782027076" className="flex items-center gap-1.5 text-base text-[#3F3E4D] hover:text-[#117465] transition-colors">
-                  <Phone className="w-5 h-5 text-[#117465]" strokeWidth={1.4} />
+              <div className="flex flex-col gap-[18px] md:gap-0">
+                <a href="tel:+27782027076" className="flex items-center gap-1.5 text-sm md:text-base text-[#3F3E4D] hover:text-[#117465] transition-colors leading-[130%] md:leading-normal">
+                  <Phone className="w-4 h-4 text-[#117465]" strokeWidth={1.4} />
                   <span>+27 78 202 7076</span>
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 text-[#117465] shrink-0 mt-1" strokeWidth={1.4} />
-                <span className="text-base text-[#3F3E4D]">Cape Town, South Africa</span>
+                <MapPin className="w-4 h-4 text-[#117465] shrink-0 mt-1" strokeWidth={1.4} />
+                <span className="text-sm md:text-base text-[#3F3E4D] leading-[130%] md:leading-normal">Cape Town, South Africa</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="w-full h-px bg-[#EAEEF5] my-4"></div>
+        {/* Divider - Bottom */}
+        <div className="w-full h-[0.5px] bg-[#EAEEF5] mt-8 md:mt-4"></div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-sm text-[#3F3E4D]">Copyright © 2025 Fyndae</p>
-          <p className="text-sm text-[#3F3E4D] text-center md:text-right">
-            All Rights Reserved | 
-            <Link to="/terms-and-conditions" className="text-[#117465] hover:underline"> Terms and Conditions</Link> | 
-            <Link to="/privacy-policy" className="text-[#117465] hover:underline"> Privacy Policy</Link>
-          </p>
+        {/* Copyright */}
+        <div className="flex flex-col items-center gap-4 md:gap-2 mt-4 md:mt-4">
+          <p className="text-sm text-[#3F3E4D] leading-[130%]">Copyright © 2025 Fyndae</p>
         </div>
         </div>
       </div>
