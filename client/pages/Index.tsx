@@ -38,45 +38,46 @@ export default function Index() {
       
       <div className="min-h-screen">
       {/* Top Part - Hero Section */}
-      <div className="w-full bg-gradient-to-br from-[#117465] to-[#0A463D]">
+      <div className="w-full bg-gradient-to-br from-[#117465] via-[#0A463D] to-[#0A463D] md:bg-gradient-to-br md:from-[#117465] md:to-[#0A463D]">
         <Navbar />
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-        <div className="flex flex-col lg:flex-row items-stretch gap-4 sm:gap-6">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-4 lg:px-6 py-10 md:py-12 lg:py-16 xl:py-20">
+        <div className="flex flex-col lg:flex-row items-stretch gap-16 md:gap-4 lg:gap-6">
           <div className="flex-1 flex flex-col justify-center">
-            <div className="max-w-[640px]">
-              <div className="space-y-8 sm:space-y-12">
-                <div className="space-y-3 sm:space-y-4">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-semibold leading-[140%] tracking-[-0.04em] text-white">
-                    Your Trusted Platform To Recover Lost Items and Verify
-                    Information
+            <div className="max-w-[640px] md:mx-0 mx-auto">
+              <div className="space-y-10 md:space-y-8 lg:space-y-12">
+                <div className="space-y-4 md:space-y-3 lg:space-y-4">
+                  <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-[48px] font-semibold leading-[140%] tracking-[-0.083em] md:tracking-[-0.04em] text-center md:text-left">
+                    <span className="text-white">Your </span>
+                    <span className="text-[#E5FDC5]">Trusted Platform</span>
+                    <span className="text-white"> To Recover Lost Items and Verify Information</span>
                   </h1>
-                  <p className="text-base sm:text-lg md:text-xl text-white/90 leading-[150%]">
+                  <p className="text-sm md:text-base lg:text-lg xl:text-xl text-white leading-[130%] md:leading-[150%] text-center md:text-left">
                     From locating lost items to confirming the identity or
                     credibility of people and organizations, Fyndae gives you
                     the information you need to move confidently and securely.
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 lg:gap-6">
-                  <Link to="/login" className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg border border-white/30 bg-white/10 backdrop-blur-sm text-white font-medium text-base sm:text-lg leading-[150%] hover:bg-white/20 transition-colors text-center">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 md:gap-3 lg:gap-4 xl:gap-6 justify-center md:justify-start">
+                  <Link to="/login" className="w-full sm:w-auto px-4 py-2 rounded-lg border border-[#B7BECD] bg-[#F7F7F8] text-[#0D0B1A] font-medium text-sm md:text-base lg:text-lg leading-[150%] hover:bg-white transition-colors text-center">
                     Join The Community
                   </Link>
-                  <Link to="/login" className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-lg bg-white text-green-70 font-medium text-base sm:text-lg leading-[150%] hover:bg-white/90 transition-colors text-center">
+                  <Link to="/login" className="w-full sm:w-auto px-4 py-2 rounded-lg bg-[#E5FDC5] text-[#21242C] font-medium text-sm md:text-base lg:text-lg leading-[150%] hover:bg-[#E5FDC5]/90 transition-colors text-center">
                     Report An Item
                   </Link>
                 </div>
               </div>
 
-              <div className="mt-12 lg:mt-16 space-y-5">
-                <div className="flex items-center">
-                  <div className="flex items-center p-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+              <div className="mt-10 md:mt-12 lg:mt-16 space-y-2 flex flex-col items-center md:items-start">
+                <div className="flex items-center justify-center md:justify-start">
+                  <div className="flex items-center py-2 px-2 gap-[-14px] rounded-full border border-[#262626] bg-[#1A1A1A]">
                     <OptimizedImage
                       src="/images/cdn/avatar-1.png"
                       alt="Community member 1"
                       width={100}
                       height={100}
                       priority={true}
-                      className="w-12 h-12 rounded-full border-2 border-white"
+                      className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2]"
                     />
                     <OptimizedImage
                       src="/images/cdn/avatar-2.png"
@@ -84,7 +85,7 @@ export default function Index() {
                       width={100}
                       height={100}
                       priority={true}
-                      className="w-12 h-12 rounded-full border-2 border-white -ml-3"
+                      className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2] -ml-3.5 md:-ml-3"
                     />
                     <OptimizedImage
                       src="/images/cdn/avatar-3.png"
@@ -92,7 +93,7 @@ export default function Index() {
                       width={100}
                       height={100}
                       priority={true}
-                      className="w-12 h-12 rounded-full border-2 border-white -ml-3"
+                      className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2] -ml-3.5 md:-ml-3"
                     />
                     <OptimizedImage
                       src="/images/cdn/avatar-4.png"
@@ -100,25 +101,24 @@ export default function Index() {
                       width={100}
                       height={100}
                       priority={true}
-                      className="w-12 h-12 rounded-full border-2 border-white -ml-3"
+                      className="w-8 h-8 md:w-12 md:h-12 rounded-full border border-[#8690A2] -ml-3.5 md:-ml-3"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-xl font-medium text-white leading-[150%] tracking-[-0.03em]">
+                <div className="space-y-2 text-center md:text-left">
+                  <h3 className="text-base md:text-xl font-medium text-white leading-[150%] tracking-[-0.03em]">
                     100+ Active Community Members
                   </h3>
-                  <p className="text-base text-white/90 leading-[150%]">
-                    Trusted by 100+ active community members helping recover
-                    lost items
+                  <p className="text-sm md:text-base text-white leading-[130%] md:leading-[150%]">
+                    Trusted by 100+ active community members helping recover lost items
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex-1 min-h-[300px] sm:min-h-[400px] lg:min-h-[744px] rounded-2xl sm:rounded-3xl overflow-hidden">
+          <div className="flex-1 min-h-[403px] md:min-h-[300px] lg:min-h-[400px] xl:min-h-[744px] rounded-3xl md:rounded-2xl lg:rounded-3xl overflow-hidden">
             <OptimizedImage
               src="/images/cdn/hero-illustration.png"
               alt="Security and trust illustration showing community support and recovery"

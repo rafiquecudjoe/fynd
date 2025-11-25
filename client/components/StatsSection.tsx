@@ -1,31 +1,28 @@
 export default function StatsSection() {
   return (
-    <section className="w-full bg-white py-8 md:py-16 lg:py-20">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-        <div className="px-6 md:px-20">
+    <section className="w-full bg-white py-10 md:py-8 lg:py-16 xl:py-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-4 lg:px-6">
+        <div className="px-0 md:px-6 lg:px-20">
           <div className="max-w-[1232px] mx-auto">
-            <div className="flex flex-col items-center gap-10 mb-12">
+            <div className="flex flex-col items-center gap-8 md:gap-10 mb-10 md:mb-12">
               <div className="flex flex-col items-center gap-4 text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-[36px] font-semibold leading-[140%] tracking-[-0.056em]">
-              In a remarkably short period,{" "}
-              <span className="text-green-70">Fyndae</span> has connected
-              thousands of users, verified hundreds of profiles and institutions
-              and facilitated the recovery of countless missing items through
-              authentic leads and secure rewards.
+            <h2 className="text-xl md:text-3xl lg:text-4xl xl:text-[36px] font-semibold leading-[140%] tracking-[-0.05em] md:tracking-[-0.056em]">
+              <span className="text-black">In a remarkably short period, </span>
+              <span className="text-green-70">Fyndae</span>
+              <span className="text-black"> has connected thousands of users, verified hundreds of profiles and institutions and facilitated the recovery of countless missing items through authentic leads and secure rewards.</span>
             </h2>
-            <p className="text-lg md:text-xl max-w-[1130px] text-black leading-[150%]">
+            <p className="text-sm md:text-lg lg:text-xl max-w-[1130px] text-black leading-[130%] md:leading-[150%]">
               With a strong verification engine and a transparent recovery
               system, we're building a safer, more reliable way for people to
               find what they've lost and confirm who they can trust.
             </p>
           </div>
 
-          <div className="flex items-center gap-1 px-4 py-4 rounded-3xl border border-gray-40 bg-[#F7F7F8]">
+          <div className="flex items-center gap-0.5 md:gap-1 px-4 py-4 rounded-3xl border border-gray-40 bg-[#F7F7F8]">
             {[...Array(5)].map((_, i) => (
               <svg
                 key={i}
-                width="22"
-                height="22"
+                className="w-[21px] h-[21px] md:w-[22px] md:h-[22px]"
                 viewBox="0 0 22 22"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +33,7 @@ export default function StatsSection() {
                 />
               </svg>
             ))}
-            <span className="ml-1 text-gray-100 font-medium text-base leading-[140%]">
+            <span className="ml-1 text-gray-100 font-medium text-sm md:text-base leading-[140%]">
               4.8 (1700+ Reviews)
             </span>
           </div>
@@ -44,37 +41,37 @@ export default function StatsSection() {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pt-6">
           <div className="flex flex-col items-center gap-5">
-            <div className="text-green-70 text-4xl md:text-5xl font-bold leading-[140%]">
+            <div className="text-green-70 text-[40px] md:text-4xl lg:text-5xl font-bold leading-[140%]">
               270+
             </div>
-            <div className="text-[#333] text-center text-lg font-semibold leading-[150%]">
+            <div className="text-[#333] text-center text-base md:text-lg font-semibold leading-[150%]">
               Reports Solved
             </div>
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <div className="text-green-70 text-4xl md:text-5xl font-bold leading-[140%]">
+            <div className="text-green-70 text-[40px] md:text-4xl lg:text-5xl font-bold leading-[140%]">
               98%
             </div>
-            <div className="text-[#333] text-center text-lg font-semibold leading-[150%]">
+            <div className="text-[#333] text-center text-base md:text-lg font-semibold leading-[150%]">
               Satisfaction Rate
             </div>
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <div className="text-green-70 text-4xl md:text-5xl font-bold leading-[140%]">
+            <div className="text-green-70 text-[40px] md:text-4xl lg:text-5xl font-bold leading-[140%]">
               100+
             </div>
-            <div className="text-[#333] text-center text-lg font-semibold leading-[150%]">
+            <div className="text-[#333] text-center text-base md:text-lg font-semibold leading-[150%]">
               Verification Checks
             </div>
           </div>
 
           <div className="flex flex-col items-center gap-5">
-            <div className="text-green-70 text-4xl md:text-5xl font-bold leading-[140%]">
+            <div className="text-green-70 text-[40px] md:text-4xl lg:text-5xl font-bold leading-[140%]">
               200+
             </div>
-            <div className="text-[#333] text-center text-lg font-semibold leading-[150%]">
+            <div className="text-[#333] text-center text-base md:text-lg font-semibold leading-[150%]">
               Verifiable Leads
             </div>
           </div>
