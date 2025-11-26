@@ -33,9 +33,7 @@ export default function FeaturesSection() {
                       Fast & Easy Lost Item Reporting
                     </h3>
                     <p className="text-[#100E21] text-lg md:text-xl leading-[150%]">
-                      Create a custom card that reflects your uinque style and
-                      personality. Choose from a range of colors, patterns, and
-                      designs to customize the look of your card.
+                      Designed to help users recover their lost or missing assets with speed and confidence.
                     </p>
                   </div>
                   <div className="relative">
